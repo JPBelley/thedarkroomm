@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', serif;
+    overflow: hidden;
+}
+
+button {
+    display: inline-block;
+    border: none;
+    text-decoration: none;
+    background: transparent;
+    font-family: "Roboto", sans-serif;
+    font-size: 2rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+    box-sizing: border-box;
+}
