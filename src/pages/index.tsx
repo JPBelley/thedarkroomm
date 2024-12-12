@@ -4,12 +4,14 @@ import type { HeadFC, PageProps } from "gatsby"
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectFade, Navigation } from 'swiper/modules';
 
+import Columns from "../components/columns";
+
 import ChevronLeft from "../assets/icons/chevron-left.svg";
 import ChevronRight from "../assets/icons/chevron-right.svg";
 
 // Import Swiper styles
 import 'swiper/css';
-import '../scss/index.scss';
+import '../styles/index.scss';
 
 import ConconDune from '../images/01-1.jpg';
 import MountainImg from '../images/mountain-compressed.jpg';
@@ -27,7 +29,7 @@ const IndexPage: React.FC<PageProps> = () => {
     <main>
       <div className={`hero ${hover && ' hovered'} ${swiperReady && ' swiper-ready'}`}>
         <h1 
-          className="hero-button"
+          className="absolute hero-button"
           onMouseEnter={() => setHover(true)}
           onMouseLeave={() => setHover(false)}
         >
@@ -52,12 +54,14 @@ const IndexPage: React.FC<PageProps> = () => {
           // onSwiper={(swiper) => console.log(swiper)}
         >
           {heroImages.map((img) => (
-            <SwiperSlide style={{ height: '100dvh', width: '100wh' }}><img src={img} alt=""  loading="eager"/></SwiperSlide>
+            <SwiperSlide><img className="max-h-dvh" src={img} alt=""  loading="eager"/></SwiperSlide>
           ))}
         </Swiper>
         {/* <ChevronRight className="chevron-next" /> */}
         {/* <ChevronLeft className="chevron-prev" /> */}
       </div>
+
+      <Columns />
     </main>
   )
 }
