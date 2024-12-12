@@ -1,6 +1,8 @@
 // General
+@use './base/root.scss';
 @use './base/reset.scss';
 @use './base/container.scss';
+@use './base/typo.scss';
 
 // Section
 @use './section/hero.scss'
