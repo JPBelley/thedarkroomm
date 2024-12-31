@@ -8,7 +8,7 @@ import CampagnaImg from "../images/la-campagna.jpg"
 const Columns: React.FC = () => {
 
   return (
-    <div className="flex w-full gap-4 px-5 py-40 flex-col md:flex-row items-center">
+    <div className="flex w-full gap-4 px-5 py-32 flex-col md:flex-row items-center">
       <Column image={PalmTreeImg}/>
       <Column image={TowerImg}/>
       <Column image={CampagnaImg}/>

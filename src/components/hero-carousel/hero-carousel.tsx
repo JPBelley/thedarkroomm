@@ -3,15 +3,10 @@ import * as React from "react"
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectFade, Navigation } from 'swiper/modules';
 
-// import ChevronLeft from "../assets/icons/chevron-left.svg";
-// import ChevronRight from "../assets/icons/chevron-right.svg";
-
-import ConconDune from '../images/01-1.jpg';
-import MountainImg from '../images/mountain-compressed.jpg';
-import Lighthouse from '../images/lighthouse.jpg';
+import ConconDune from '../../images/01-1.jpg';
 
 const heroImages = [
-  ConconDune, MountainImg, Lighthouse
+  ConconDune
 ]
 
 /*
@@ -30,7 +25,7 @@ const HeroCarousel: React.FC = () => {
   return (
     <div className={`hero relative flex items-center justify-center min-h-dvh${hover ? ' hovered ' : ''}${swiperReady && ' swiper-ready'}`}>
       <h1 
-        className="absolute hero-button"
+        className="absolute hero-button h3"
         onMouseEnter={() => setHover(true)}
         onMouseLeave={() => setHover(false)}
       >
@@ -51,8 +46,6 @@ const HeroCarousel: React.FC = () => {
         navigation={true}
         modules={[EffectFade, Navigation]}
         onInit={() => setSwiperReady(true)}
-        // onSlideChange={() => console.log('slide change')}
-        // onSwiper={(swiper) => console.log(swiper)}
       >
         {heroImages.map((img, i) => (
           <SwiperSlide style={swiperSlide} key={i}>
@@ -60,8 +53,6 @@ const HeroCarousel: React.FC = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-      {/* <ChevronRight className="chevron-next" /> */}
-      {/* <ChevronLeft className="chevron-prev" /> */}
     </div>
   );
 }

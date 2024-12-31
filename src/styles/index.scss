@@ -2,7 +2,9 @@
 @use './base/root.scss';
 @use './base/reset.scss';
 @use './base/container.scss';
-@use './base/typo.scss';
+
+// Design system
+@use '../design-system/headings/heading.scss';
 
 // Section
-@use './section/hero.scss'
+@use '../components/hero-carousel/hero.scss'
