@@ -22,7 +22,7 @@ const IndexPage: React.FC<PageProps> = () => {
       <HeroCarousel />
 
       {/* Portfolio */}
-      <h2 className="text-center mt-16">Portfolio</h2>
+      <h2 className="text-center my-16">Portfolio</h2>
       <Columns />
     </main>
   )
