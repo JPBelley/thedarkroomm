@@ -10,9 +10,9 @@ const Columns: React.FC = () => {
   return (
     <>
       <div className="flex w-full container gap-4 px-5 pb-32 flex-col md:flex-row items-center flex-wrap">
-        <Column image={IMG1}/>
-        <Column image={IMG2}/>
-        <Column image={IMG3}/>
+        <Column image={IMG1} href="https://thedarkroomfactory.etsy.com/ca/listing/1838508074/6-lightroom-presets-cinematic-blue"/>
+        <Column image={IMG2} href="https://thedarkroomfactory.etsy.com/ca/listing/1842233178/10-lightroom-presets-cinematic-green"/>
+        <Column image={IMG3} href="https://thedarkroomfactory.etsy.com/ca/listing/1819820658/15-landscape-lightroom-presets-lightroom" />
       </div>
     </>
   );

@@ -1,11 +1,17 @@
 .container {
     max-width: 1680px;
-    margin: 0 auto;
-    padding-left: 20px;
-    padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .container-small {
     max-width: 1200px;
     margin: 0 auto;
+}
+
+.container-white {
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: var(--white);
+    color: var(--black);
 }

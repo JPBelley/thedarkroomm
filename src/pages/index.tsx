@@ -1,5 +1,6 @@
 import * as React from "react"
 import type { HeadFC, PageProps } from "gatsby"
+import { Script } from "gatsby"
 
 import Layout from "../components/layout/layout";
 import Hero from "../components/hero/hero";
@@ -18,15 +19,19 @@ const IndexPage: React.FC<PageProps> = () => {
     <>
       <Layout>
         {/* Hero */}
-        {/* <Hero>JP Belley</Hero> */}
         <Hero>The Darkroomm</Hero>
 
-        {/* Newsletter  */}
-        <div className="ml-embedded my-16" data-form="ndBhtT"></div>
+        <div className="container container-white pt-16 rounded-b-2xl">
+          
+          {/* Newsletter  */}
+          <h2 className="text-center mb-8">Newsletter</h2>
+          <div className="ml-embedded" data-form="ndBhtT"></div>
 
-        {/* Portfolio */}
-        <h2 className="text-center my-16">Products</h2>
-        <Columns />
+          {/* Portfolio */}
+          <h2 className="text-center my-16">Products</h2>
+          <Columns />
+        </div>
+
       </Layout>
     </>
   )
@@ -36,9 +41,9 @@ export default IndexPage
 
 export const Head: HeadFC = () => (
   <>
-    <title>Home Page</title>
+    <title>Home Page | The Darkroomm</title>
     {/* <!-- MailerLite Universal --> */}
-    <script id="hello-world">
+    <Script>
       {`
         (function(w,d,e,u,f,l,n){w[f] = w[f] || function () {
           (w[f].q = w[f].q || [])
@@ -48,7 +53,7 @@ export const Head: HeadFC = () => (
         (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
         ml('account', '1253538');
       `}
-    </script>
+    </Script>
     {/* <!-- End MailerLite Universal --> */}
   </> 
 )

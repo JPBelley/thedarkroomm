@@ -5,6 +5,7 @@ import * as React from "react";
  */
 interface ColumnProps {
   image: string;
+  href: string;
 }
 
 /*
@@ -12,17 +13,18 @@ interface ColumnProps {
  */
 
 const Column: React.FC<ColumnProps> = (props) => {
-  const { image } = props
+  const { image, href } = props
 
   return (
-    <div 
+    <a
+      href={href} 
       className={`column relative flex-1 w-full min-w-[30%]`} 
     >
       <img 
         className={`rounded object-cover w-full`} 
         src={image}
       />
-    </div>
+    </a>
   );
 }
 
