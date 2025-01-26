@@ -13,15 +13,15 @@ interface HeroProps {
  * Style
  */
 
-const HeroCarousel: React.FC<HeroProps> = ({children}) => {
+const Hero: React.FC<HeroProps> = ({children}) => {
 
   return (
-    <div className={`hero relative flex items-center justify-center flex-col`}>
-      <h1>{children}</h1>
+    <div className={`hero container relative flex items-center justify-center flex-col`}>
+      <h1 className="my-12">{children}</h1>
 
-      <img className="object-cover rounded w-full" src={ConconDune} alt="Concon Dunes" loading="eager"/>
+      <img className="object-cover rounded-2xl w-full max-h-[700px]" src={ConconDune} alt="Concon Dunes" loading="eager"/>
     </div>
   );
 }
 
-export default HeroCarousel
+export default Hero
