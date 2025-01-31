@@ -19,9 +19,11 @@ const IndexPage: React.FC<PageProps> = () => {
     <>
       <Layout>
         {/* Hero */}
-        <Hero>The Darkroomm</Hero>
+        <Hero>
+          The Darkroomm
+        </Hero>
 
-        <div className="container container-white pt-16 rounded-b-2xl">
+        <div className="container-white pt-16 rounded-b-2xl">
           
           {/* Newsletter  */}
           <h2 className="text-center mb-8">Newsletter</h2>
