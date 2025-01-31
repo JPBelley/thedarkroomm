@@ -1,7 +1,9 @@
 import React from "react";
+import type { HeadFC, PageProps } from "gatsby"
+import { Script } from "gatsby"
 import Footer from "../footer/footer"
 
-export default function Layout({ children }) {
+const Layout: React.FC<PageProps> = ({ children }) => {
     return (
         <>
             <main>
@@ -13,3 +15,5 @@ export default function Layout({ children }) {
         </>
     )
 }
+
+export default Layout
