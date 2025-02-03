@@ -31,7 +31,7 @@ const IndexPage: React.FC<PageProps> = () => {
 
           {/* Portfolio */}
           <h2 className="text-center mt-16 mb-4">Products</h2>
-          <p className="max-w-4xl text-center mx-auto mb-16">At our shop, we pour our passion into creating Lightroom presets that make editing effortless and enjoyable. Whether you're a beginner or a pro, our presets are designed to enhance your photos with beautiful tones and a unique style—helping you achieve the look you love with just a click.</p>
+          <p className="max-w-4xl text-center mx-auto mb-16">Our team pour their passion into creating Lightroom presets that make editing effortless and enjoyable. Whether you're a beginner or a pro, our presets are designed to enhance your photos with beautiful tones and a unique style—helping you achieve the look you love with just a click.</p>
           <Columns />
         </div>
 

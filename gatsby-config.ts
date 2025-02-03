@@ -9,7 +9,7 @@ const config: GatsbyConfig = {
   // If you use VSCode you can also use the GraphQL plugin
   // Learn more at: https://gatsby.dev/graphql-typegen
   graphqlTypegen: true,
-  plugins: ["gatsby-plugin-netlify-cms", "gatsby-plugin-sass", "gatsby-plugin-image", "gatsby-plugin-sitemap", "gatsby-plugin-postcss", {
+  plugins: ["gatsby-plugin-netlify-cms", "gatsby-plugin-sass", "gatsby-plugin-image", "gatsby-plugin-sitemap", "gatsby-plugin-postcss", "gatsby-transformer-remark",{
     resolve: 'gatsby-plugin-manifest',
     options: {
       "icon": "src/images/favicon.svg"
@@ -28,7 +28,15 @@ const config: GatsbyConfig = {
       "path": "./src/pages/"
     },
     __key: "pages"
-  }, {
+  },
+  {
+    resolve: `gatsby-source-filesystem`,
+    options: {
+      name: `content`,
+      path: `${__dirname}/src/content`,
+    },
+  },
+  {
     resolve: 'gatsby-plugin-react-svg',
     options: {
       rule: {
