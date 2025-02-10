@@ -1,6 +1,6 @@
 import * as React from "react"
 import type { HeadFC, PageProps } from "gatsby"
-import { Script } from "gatsby"
+import { Script, graphql } from "gatsby"
 
 import Layout from "../components/layout/layout";
 import Hero from "../components/hero/hero";
@@ -12,8 +12,8 @@ import Columns from "../components/columns";
 import 'swiper/css';
 import '../styles/index.scss';
 
-const IndexPage: React.FC<PageProps> = () => {
-
+const IndexPage: React.FC<PageProps> = ({ data }) => {
+  const { allMarkdownRemark: {edges} } = data 
 
   return (
     <>
@@ -31,8 +31,8 @@ const IndexPage: React.FC<PageProps> = () => {
 
           {/* Portfolio */}
           <h2 className="text-center mt-16 mb-4">Products</h2>
-          <p className="max-w-4xl text-center mx-auto mb-16">Our team pour their passion into creating Lightroom presets that make editing effortless and enjoyable. Whether you're a beginner or a pro, our presets are designed to enhance your photos with beautiful tones and a unique style—helping you achieve the look you love with just a click.</p>
-          <Columns />
+          <p className="max-w-4xl text-center mx-auto mb-16">Whether you're a beginner or a pro, our presets are designed to enhance your photos with beautiful tones and a unique style—helping you achieve the look you love with just a click.</p>
+          <Columns columns={edges}/>
         </div>
 
       </Layout>
@@ -66,3 +66,24 @@ export const Head: HeadFC = () => (
     {/* <!-- Events Simply analitycs --> */}
   </> 
 )
+
+export const pageQuery = graphql`
+  query Products {
+    allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            etsyLink
+            featuredImage {
+              childImageSharp {
+                gatsbyImageData(width: 600)
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`;

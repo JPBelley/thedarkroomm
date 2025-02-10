@@ -1,6 +1,5 @@
 import React from "react";
-import type { HeadFC, PageProps } from "gatsby"
-import { Script } from "gatsby"
+import type { PageProps } from "gatsby"
 import Footer from "../footer/footer"
 
 const Layout: React.FC<PageProps> = ({ children }) => {

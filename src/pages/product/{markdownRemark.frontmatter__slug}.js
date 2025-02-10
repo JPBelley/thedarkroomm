@@ -5,9 +5,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Layout from "../../components/layout/layout";
 import Hero from "../../components/hero/hero"
 
-export default function ProductPostTemplate({
-    data, // this prop will be injected by the GraphQL query below.
-}) {
+export default function ProductPostTemplate({ data }) {
   const { markdownRemark } = data // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark
   let featuredImg = getImage(frontmatter.featuredImage?.childImageSharp?.gatsbyImageData)
@@ -19,7 +17,6 @@ export default function ProductPostTemplate({
           {frontmatter.title}
         </Hero>
         <GatsbyImage image={featuredImg} alt={frontmatter.title} />
-        {/* <h2>{frontmatter.date}</h2> */}
         <div
             dangerouslySetInnerHTML={{ __html: html }}
         />
