@@ -9,12 +9,12 @@ const Columns: React.FC<ColumnsProps>  = ({columns}) => {
   
   return (
     <>
-      <div className="flex w-full container gap-4 pb-32 flex-col md:flex-row items-center flex-wrap">
+      <div className="flex w-full container gap-4 pb-28 flex-col md:flex-row items-center flex-wrap">
         {columns.map((column: any ,i: number) => {
-          const { etsyLink, featuredImage } = column.node?.frontmatter;
+          const { published, etsyLink, featuredImage } = column.node?.frontmatter;
 
           return (
-            <Column key={i} image={featuredImage} href={etsyLink} />
+            published && <Column key={i} image={featuredImage} href={etsyLink} />
         )})}
       </div>
     </>

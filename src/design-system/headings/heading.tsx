@@ -1,6 +1,10 @@
 import * as React from "react"
 
-const Heading = ({ level, children }) => {
+interface HeadingType {
+    level: string;
+}
+
+const Heading: React.FC<HeadingType> = ({ level, children }) => {
     const Level = level;
 
     return (

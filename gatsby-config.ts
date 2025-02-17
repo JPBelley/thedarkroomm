@@ -18,19 +18,20 @@ const config: GatsbyConfig = {
     "gatsby-transformer-remark",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
+    "gatsby-plugin-mdx",
   {
     resolve: 'gatsby-plugin-manifest',
     options: {
       "icon": "src/images/favicon.svg"
     }
-  }, "gatsby-plugin-mdx",{
+  },{
     resolve: 'gatsby-source-filesystem',
     options: {
       "name": "images",
       "path": "./src/images/"
     },
     __key: "images"
-  }, {
+  },{
     resolve: 'gatsby-source-filesystem',
     options: {
       "name": "pages",

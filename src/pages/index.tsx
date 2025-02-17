@@ -24,15 +24,16 @@ const IndexPage: React.FC<PageProps> = ({ data }) => {
         </Hero>
 
         <div className="container-white pt-16 rounded-b-2xl">
-          
-          {/* Newsletter  */}
-          <h2 className="text-center mb-8">Newsletter</h2>
-          <div className="ml-embedded" data-form="ndBhtT"></div>
 
           {/* Portfolio */}
           <h2 className="text-center mt-16 mb-4">Products</h2>
-          <p className="max-w-4xl text-center mx-auto mb-16">Whether you're a beginner or a pro, our presets are designed to enhance your photos with beautiful tones and a unique style—helping you achieve the look you love with just a click.</p>
-          <Columns columns={edges}/>
+          <p className="max-w-4xl text-center mx-auto mb-12">Whether you're a beginner or a pro, our presets are designed to enhance your photos with beautiful tones and a unique style—helping you achieve the look you love with just few clicks.</p>
+          <Columns columns={edges} />
+          
+          {/* Newsletter  */}
+          <h2 className="text-center mb-8">Newsletter</h2>
+          <div className="ml-embedded pb-32" data-form="ndBhtT"></div>
+
         </div>
 
       </Layout>
@@ -74,6 +75,7 @@ export const pageQuery = graphql`
         node {
           id
           frontmatter {
+            published
             title
             etsyLink
             featuredImage {
