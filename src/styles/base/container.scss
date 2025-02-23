@@ -10,8 +10,29 @@
 }
 
 .container-white {
-    padding-left: 20px;
-    padding-right: 20px;
+    // padding-left: 20px;
+    // padding-right: 20px;
     background-color: var(--white);
     color: var(--black);
+}
+
+.container-content {
+
+    h1, h2, h3, h4, h5, h6, p {
+        margin-bottom: 1.5rem;
+    }
+
+    h2 {
+        font-size: clamp(2.5rem, 4.7vw, 3rem);
+        letter-spacing: -3px;
+    }
+
+    li {
+        margin-bottom: 1rem;
+    }
+
+    p, li {
+        font-size: 1.125rem;
+        line-height: 1.2;
+    }
 }

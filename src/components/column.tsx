@@ -22,7 +22,7 @@ const Column: React.FC<ColumnProps> = (props) => {
   return (
     <a
       href={href} 
-      className={`column relative flex-1 w-full min-w-[30%]`}
+      className={`column relative flex-1 w-full min-w-[30%] rounded overflow-hidden`}
       onClick={() => sa_event("click_product")}
       target="_blank"
     >

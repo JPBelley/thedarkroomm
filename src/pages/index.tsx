@@ -19,20 +19,20 @@ const IndexPage: React.FC<PageProps> = ({ data }) => {
     <>
       <Layout>
         {/* Hero */}
-        <Hero>
-          The Darkroomm
-        </Hero>
+        <Hero
+          title="The Darkroomm"
+        />
 
-        <div className="container-white pt-16 rounded-b-2xl">
+        <div className="container-white px-5 pt-12 lg:pt-24 rounded-b-2xl">
 
           {/* Portfolio */}
-          <h2 className="text-center mt-16 mb-4">Products</h2>
+          <h2 className="text-center mb-4">Products</h2>
           <p className="max-w-4xl text-center mx-auto mb-12">Whether you're a beginner or a pro, our presets are designed to enhance your photos with beautiful tones and a unique style—helping you achieve the look you love with just few clicks.</p>
           <Columns columns={edges} />
           
           {/* Newsletter  */}
           <h2 className="text-center mb-8">Newsletter</h2>
-          <div className="ml-embedded pb-32" data-form="ndBhtT"></div>
+          <div className="ml-embedded pb-12 lg:pb-32" data-form="ndBhtT"></div>
 
         </div>
 
