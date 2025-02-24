@@ -17,7 +17,6 @@ interface ColumnProps {
 const Column: React.FC<ColumnProps> = (props) => {
   const { image, href } = props
   let featuredImg = getImage(image?.childImageSharp?.gatsbyImageData)
-  console.log(featuredImg);
 
   return (
     <a
