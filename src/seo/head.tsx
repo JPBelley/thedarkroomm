@@ -9,9 +9,6 @@ export const Head: HeadFC = ({ location, params, data, pageContext }) => {
         <title>The Darkroomm</title>
         {/* <!-- Osano --> */}
         <Script id="osano" src="https://cmp.osano.com/ftVjNLUHak/f8da4df3-417c-42d9-b198-aa8def05e038/osano.js"></Script>
-        {/* LogRocket */}
-        <Script src="https://cdn.lrkt-in.com/LogRocket.min.js" crossorigin="anonymous"></Script>
-        <Script>window.LogRocket && window.LogRocket.init('cdyunb/thedarkroommcom');</Script>
         {/* <!-- MailerLite Universal --> */}
         <Script>
             {`

@@ -32,11 +32,11 @@ const ProductPostTemplate = ({ data }) => {
             </div>
 
             {/* <div className="column relative flex-1 w-full min-w-[50%] max-h-[60vh] overflow-hidden"> */}
-            <div className="column relative flex-1 w-full min-w-[50%] lg:rounded-l-2xl overflow-hidden" controls>
+            {/* <div className="column relative flex-1 w-full min-w-[50%] lg:rounded-l-2xl overflow-hidden" controls>
               <video className="w-full" autoplay>
                 <source src={`${window.location.origin}${frontmatter.video}`} type="video/mp4"></source>
               </video>
-            </div>
+            </div> */}
           </div>
           
           {/* General content */}
