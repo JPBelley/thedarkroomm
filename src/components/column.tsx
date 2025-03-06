@@ -26,10 +26,6 @@ const Column: React.FC<ColumnProps> = (props) => {
       target="_blank"
     >
       <GatsbyImage image={featuredImg} alt={''} />
-      {/* <img 
-        className={`rounded object-cover w-full`} 
-        src={image}
-      /> */}
     </a>
   );
 }

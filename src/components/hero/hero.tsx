@@ -1,6 +1,6 @@
 import * as React from "react"
 
-import ConconDune from '../../images/01-1.jpg';
+import ConconDune from '../../content/images/product-0/website-cover.jpg';
 
 /*
  * Types

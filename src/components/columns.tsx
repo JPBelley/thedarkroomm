@@ -1,9 +1,9 @@
 import * as React from "react"
 import Column from "./column"
 
-// interface ColumnsProps {
-//   columns: Array<>;
-// }
+interface ColumnsProps {
+  columns: any;
+}
 
 const Columns: React.FC<ColumnsProps>  = ({columns}) => {
   
