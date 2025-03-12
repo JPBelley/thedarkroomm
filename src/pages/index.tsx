@@ -5,6 +5,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout/layout";
 import Hero from "../components/hero/hero";
 import Columns from "../components/columns";
+import Column from "../components/column"
 
 // Import Swiper styles
 import 'swiper/css';
@@ -31,7 +32,15 @@ const IndexPage: React.FC<PageProps> = ({ data }) => {
           {/* Portfolio */}
           <h2 className="text-center mb-4">Products</h2>
           <p className="max-w-4xl text-center mx-auto mb-12 text-xl">Whether you're a beginner or a pro, our presets are designed to enhance your photos with beautiful tones and a unique style—helping you achieve the look you love with just few clicks.</p>
-          <Columns columns={edges} />
+          <Columns>
+            {edges.map((column: any, i: number) => {
+              const { published, etsyLink, featuredImage } = column.node?.frontmatter;
+
+              return (
+                published && <Column key={i} image={featuredImage} href={etsyLink} />
+              )
+            })}
+          </Columns>
 
         </div>
 

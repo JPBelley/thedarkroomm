@@ -10,8 +10,9 @@
 }
 
 .container-white {
-    // padding-left: 20px;
-    // padding-right: 20px;
+    max-width: 1680px;
+    margin-left: auto;
+    margin-right: auto;
     background-color: var(--white);
     color: var(--black);
 }
