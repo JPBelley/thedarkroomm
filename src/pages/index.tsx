@@ -23,7 +23,7 @@ const IndexPage: React.FC<PageProps> = ({ data }) => {
 
         <div className="container-white px-5 pt-12 lg:pt-24 rounded-b-2xl">
 
-          {/* Newsletter  */}
+          {/* Newsletter  TODO: make a component*/}
           <h2 className="text-center mb-8">Newsletter</h2>
           <p className="max-w-4xl text-center mx-auto mb-4 text-xl">Join our newsletter and unlock a free <b>6-pack of Lightroom presets</b>—designed to make your photos stand out. Plus, get insider editing tips and VIP discounts!</p>
           <div className="text-center ml-embedded pb-12 lg:pb-32" data-form="ndBhtT"></div>
