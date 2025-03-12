@@ -1,0 +1,31 @@
+// reset button
+.button {
+    display: inline-block;
+    text-decoration: none;
+    background: transparent;
+    font-family: "helvetica neue", sans-serif;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    transition: .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+button:hover {
+    color: var(--black);
+    background-color: var(--white);
+    border-color: var(--black);
+}
+
+.button-light {
+}
+.button-dark {
+    color: var(--black);
+    background-color: var(--white);
+    border-color: var(--black);
+    
+    &:hover {
+        color: var(--white);
+        background-color: var(--black);
+        border-color: var(--black);
+    }
+}
