@@ -20,7 +20,7 @@ const Hero: React.FC<HeroProps> = ({title, image}) => {
       <h1 className="my-8 lg:my-16">{title}</h1>
       
       <GatsbyImage 
-        className="rounded-t-2xl w-full max-h-[700px]"
+        className="rounded-t-2xl w-full max-h-[700px] min-h-[300px]"
         image={image} 
         alt={title}
       />
