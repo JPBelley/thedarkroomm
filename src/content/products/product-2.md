@@ -7,11 +7,12 @@ etsyLink: "https://thedarkroomfactory.etsy.com/ca/listing/1838508074/6-lightroom
 featuredImage: ../images/cinematic-blue-cover.jpg
 heroImage: ../images/product-2/website-cover.jpg
 ---
-## CINEMATIC PRESET COLLECTION
+## CINEMATIC BLUE PRESET COLLECTION
 
 Turn your photos into striking works of art with the Cinematic Preset Collection, a set of 6 Lightroom presets designed to immerse your images in dramatic, blue-drenched tones. Inspired by the bold aesthetics of cinema, these presets deliver rich contrasts, atmospheric depth, and a unique, unforgettable color grade.
+<div style="margin-top: 50px;"></div>
 
-### WHAT’S INSIDE?
+## WHAT’S INSIDE?
 
 - 6 Mobile Presets: Perfect for quick, cinematic edits on the go.
 - 6 Desktop Presets: For precise, professional adjustments with a bold cinematic look.

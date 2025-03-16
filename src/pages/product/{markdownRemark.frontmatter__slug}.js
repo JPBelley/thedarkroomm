@@ -25,23 +25,27 @@ const ProductPostTemplate = ({ data }) => {
 
         <div className="container-white rounded-b-2xl">
           
-          {/* Section 1 */}
-          <div className="container-content flex w-full container flex-col md:flex-row items-center">
-            <div className="relative flex-1 w-full p-5 pb-12 lg:p-8 text-center">
-              <h2>{frontmatter?.videoHeading}</h2>
-              <Button
-                text="Buy now"
-                color="dark"
-                link={frontmatter.etsyLink}
-              />
-            </div>
+          {/* Section Video */}
+          {!!frontmatter.video && (
+            <div className="container-content flex w-full container flex-col md:flex-row items-center">
+              <div className="relative flex-1 w-full p-5 pb-12 lg:p-8 text-center">
+                <h2>{frontmatter?.videoHeading}</h2>
+                <Button
+                  text="Buy now"
+                  color="dark"
+                  link={frontmatter.etsyLink}
+                  target="_blank"
+                  // onClick={() => sa_event("click_product")}
+                />
+              </div>
 
-            <div className="relative flex flex-col justify-center flex-1 w-full min-w-[50%] aspect-square overflow-hidden" controls>
-              <video className="w-full" autoPlay muted loop>
-                <source src={`${frontmatter.video}`} type="video/mp4"></source>
-              </video>
+              <div className="relative flex flex-col justify-center flex-1 w-full min-w-[50%] aspect-square overflow-hidden" controls>
+                <video className="w-full" autoPlay muted loop>
+                  <source src={`${frontmatter.video}`} type="video/mp4"></source>
+                </video>
+              </div>
             </div>
-          </div>
+          )}
           
           {/* <PresetCarousel /> */}
           <section
@@ -54,6 +58,8 @@ const ProductPostTemplate = ({ data }) => {
               text="Buy now"
               color="dark"
               link={frontmatter.etsyLink}
+              target="_blank"
+              // onClick={() => sa_event("click_product")}
             />
           </section>
 

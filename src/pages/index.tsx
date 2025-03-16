@@ -34,10 +34,10 @@ const IndexPage: React.FC<PageProps> = ({ data }) => {
           <p className="max-w-4xl text-center mx-auto mb-12 text-xl">Whether you're a beginner or a pro, our presets are designed to enhance your photos with beautiful tones and a unique style—helping you achieve the look you love with just few clicks.</p>
           <Columns>
             {edges.map((column: any, i: number) => {
-              const { published, etsyLink, featuredImage } = column.node?.frontmatter;
+              const { published, slug, featuredImage } = column.node?.frontmatter;
 
               return (
-                published && <Column key={i} image={featuredImage} href={etsyLink} />
+                published && <Column key={i} image={featuredImage} href={`/product/${slug}`} />
               )
             })}
           </Columns>
@@ -61,6 +61,7 @@ export const pageQuery = graphql`
           id
           frontmatter {
             published
+            slug
             title
             etsyLink
             featuredImage {
