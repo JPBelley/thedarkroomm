@@ -1,6 +1,6 @@
 import React from "react";
-import type { PageProps } from "gatsby"
 import Footer from "../footer/footer"
+import Nav from "../nav/nav";
 
 type LayoutProps = {
     children: React.ReactNode;
@@ -9,6 +9,7 @@ type LayoutProps = {
 const Layout = ({ children }: LayoutProps) => {
     return (
         <>
+            <Nav />
             <main>
                 {children}
             </main>

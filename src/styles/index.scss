@@ -8,8 +8,12 @@
 @use '../design-system/headings/heading.scss';
 @use '../design-system/button/button.scss';
 
+// Logo
+@use '../components/svg/logo.scss';
+
 // Newsletter
 @use '../components/newsletter/newsletter.scss';
+@use '../components/nav/nav.scss';
 
 // Templates
 @use '../pages/product/product.scss'

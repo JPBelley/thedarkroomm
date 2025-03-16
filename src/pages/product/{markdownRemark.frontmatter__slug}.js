@@ -38,7 +38,7 @@ const ProductPostTemplate = ({ data }) => {
 
             <div className="relative flex flex-col justify-center flex-1 w-full min-w-[50%] aspect-square overflow-hidden" controls>
               <video className="w-full" autoPlay muted loop>
-                <source src={`${window.location.origin}${frontmatter.video}`} type="video/mp4"></source>
+                <source src={`${frontmatter.video}`} type="video/mp4"></source>
               </video>
             </div>
           </div>
