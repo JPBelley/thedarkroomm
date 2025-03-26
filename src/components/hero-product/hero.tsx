@@ -17,7 +17,7 @@ const Hero: React.FC<HeroProps> = ({title, image}) => {
 
   return (
     <div className={`hero container relative flex items-center justify-center flex-col text-center`}>
-      <h1 className="mt-2 mb-8 lg:mb-16">{title}</h1>
+      <h1 className="mt-2 mb-8 lg:mb-16 max-w-5xl">{title}</h1>
       
       <GatsbyImage 
         className="rounded-t-2xl w-full max-h-[700px] min-h-[300px]"

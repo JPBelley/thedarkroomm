@@ -8,11 +8,16 @@ featuredImage: ../images/product-0/landscape-cover.jpg
 heroImage: ../images/product-0/website-cover.jpg
 videoHeading: Capture the beauty of the great outdoors with the Landscape Preset Collection
 video: /videos/landscape.mp4
-presetCarousel1: ../images/product-0/landscape-1.jpg
-presetCarousel2: ../images/product-0/landscape-2.jpg
-presetCarousel3: ../images/product-0/landscape-3.jpg
-presetCarousel4: ../images/product-0/landscape-4.jpg
-presetCarousel5: ../images/product-0/landscape-5.jpg
+presetCarousel: 
+    - ../images/product-0/landscape-1.jpg
+    - ../images/product-0/landscape-2.jpg
+    - ../images/product-0/landscape-3.jpg
+    - ../images/product-0/landscape-4.jpg
+    - ../images/product-0/landscape-5.jpg
+keywords:
+    - cinematic
+categories:
+    - cinematic
 ---
 ## What's inside? 
 

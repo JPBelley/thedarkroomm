@@ -5,7 +5,7 @@ import { getImage } from "gatsby-plugin-image"
 import Layout from "../../components/layout/layout";
 import Hero from "../../components/hero-product/hero"
 import Button from "../../design-system/button/button";
-// import PresetCarousel from '../../components/preset-carousel/preset-carousel'
+import PresetCarousel from '../../components/preset-carousel/preset-carousel'
 
 const ProductPostTemplate = ({ data }) => {
   const { markdownRemark } = data // data.markdownRemark holds your post data
@@ -47,7 +47,9 @@ const ProductPostTemplate = ({ data }) => {
             </div>
           )}
           
-          {/* <PresetCarousel /> */}
+          {/* Preset discovery section */}
+          {frontmatter.presetCarousel && <PresetCarousel images={frontmatter.presetCarousel} />}
+
           <section
             className="container-content px-5 py-12 lg:py-16 mx-auto text-center max-w-4xl"
           >
@@ -94,6 +96,11 @@ export const pageQuery = graphql`
         heroImage {
           childImageSharp {
             gatsbyImageData(width: 1640)
+          }
+        }
+        presetCarousel {
+          childImageSharp {
+            gatsbyImageData(width: 600)
           }
         }
         featuredImage {
