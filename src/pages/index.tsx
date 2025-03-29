@@ -5,7 +5,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout/layout";
 import Hero from "../components/hero/hero";
 import Columns from "../components/columns";
-import Column from "../components/column"
+import Column from "../components/column";
 
 // Import Swiper styles
 import 'swiper/css';

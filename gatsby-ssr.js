@@ -1,14 +1,14 @@
-import React from 'react';
+// const React = require("react")
+// const Layout = require("./src/components/layout/layout.tsx")
 
-export const onRenderBody = ({ setHeadComponents }) => {
-    setHeadComponents([
-        // <link
-        //     key="gt-super"
-        //     rel="preload"
-        //     href="/fonts/GT-Super-Text-Bold.woff2"
-        //     as="font"
-        //     type="font/woff2"
-        //     crossOrigin="anonymous"
-        // />
-    ]);
-};
+// Adds a class name to the body element
+// exports.onRenderBody = ({ setBodyAttributes }, pluginOptions) => {
+//     setBodyAttributes({
+//         className: "my-body-class",
+//     })
+// }
+
+// Wraps every page in a component
+// exports.wrapPageElement = ({ element, props }) => {
+//     return <Layout {...props}>{element}</Layout>
+// }

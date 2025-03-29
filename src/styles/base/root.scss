@@ -3,3 +3,31 @@
     --black: #1C1C1C;
     --secondary: #2F2F2F;
 }
+
+@keyframes floatLetter {
+    0% {
+        transform: translate(-20px, 40px);
+        opacity:0;
+    }
+    50% {
+        opacity: 0.49;
+    }
+
+    100% {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
+.animated-letter {
+    overflow: hidden;
+    
+    span {
+        display: inline-block;
+    }
+}
+
+.animated-letter span.letter {
+    animation: floatLetter 1s cubic-bezier(0.3, 0, 0.2, 1) forwards;
+    opacity: 0;
+    // white-space: pre;
+}
