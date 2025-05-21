@@ -1,6 +1,5 @@
 import * as React from "react"
 import Logo from "../svg/Logo";
-import { Link } from "gatsby";
 
 const Nav: React.FC = () => {
 
