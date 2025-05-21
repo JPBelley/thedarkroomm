@@ -6,6 +6,8 @@ title: "Cinematic Blue Collection"
 etsyLink: "https://thedarkroomfactory.etsy.com/ca/listing/1838508074/6-lightroom-presets-cinematic-blue"
 featuredImage: ../images/cinematic-blue-cover.jpg
 heroImage: ../images/product-2/website-cover.jpg
+videoHeading: Turn your photos into striking works of art with the Cinematic Preset Collection
+video: /videos/cinematic-blue.mp4
 ---
 ## CINEMATIC BLUE PRESET COLLECTION
 
