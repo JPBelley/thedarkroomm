@@ -1,4 +1,4 @@
-import * as React from "react"
+import React, { useEffect, useState } from "react"
 
 import ConconDune from '../../content/images/product-0/website-cover.jpg';
 import SpanText from "../../utils/span-text";
@@ -15,6 +15,13 @@ interface HeroProps {
  */
 
 const Hero: React.FC<HeroProps> = ({title}) => {
+  // const [fontsLoaded, setFontsLoaded] = useState(false);
+
+  // useEffect(() => {
+  //   document.fonts.ready.then(() => {
+  //     setFontsLoaded(true);
+  //   });
+  // }, []);
 
   return (
     <div className={`hero container relative flex items-center justify-center flex-col text-center`}>
