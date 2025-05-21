@@ -1,6 +1,7 @@
 import * as React from "react"
 import type { PageProps } from "gatsby"
 import { graphql } from "gatsby"
+import useInView from "../utils/use-in-view";
 
 import Layout from "../components/layout/layout";
 import Hero from "../components/hero/hero";
@@ -13,6 +14,7 @@ import '../styles/index.scss';
 
 const IndexPage: React.FC<PageProps> = ({ data }) => {
   const { allMarkdownRemark: {edges} } = data 
+  const [ref, isVisible] = useInView();
 
   return (
     <>
@@ -25,7 +27,7 @@ const IndexPage: React.FC<PageProps> = ({ data }) => {
         <div className="container-white px-5 pt-12 lg:pt-24 rounded-b-2xl">
 
           {/* Newsletter  TODO: make a component*/}
-          <h2 className="text-center mb-8">Newsletter</h2>
+          <h2 className={`text-center mb-8${isVisible ? ' font-bold' : ''}`} ref={ref}>Newsletter</h2>
           <p className="max-w-4xl text-center mx-auto mb-4 text-xl">Join our newsletter and unlock a free <b>6-pack of Lightroom presets</b>—designed to make your photos stand out. Plus, get insider editing tips and VIP discounts!</p>
           <div className="text-center ml-embedded pb-12 lg:pb-32" data-form="ndBhtT"></div>
 
