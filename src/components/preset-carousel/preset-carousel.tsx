@@ -6,20 +6,19 @@ import Columns from "../columns";
 
 const PresetCarousel: React.FC<PageProps> = ({ images }: any) => {
     const [activeImg, setActiveImg] = useState(0);
-
-    console.log(activeImg);
     
     return (
         <Columns gap="0">
             <div className="column relative flex-1 w-full min-w-1/2">
                 {images.map((image: any, i: number) => {
-                    const classList = `w-full ${activeImg === i ? '': ' hidden'}`;
+                    const classList = `w-full`;
 
                     return (
                         <GatsbyImage 
                             key={i}
                             className={classList}
                             image={getImage(image?.childImageSharp?.gatsbyImageData)}
+                            style={{ display: activeImg === i ? '' : 'none' }}
                             alt={''}
                         />
                     )
