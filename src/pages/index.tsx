@@ -34,7 +34,7 @@ const IndexPage: React.FC<PageProps> = ({ data }) => {
           {/* Portfolio */}
           <h2 className="text-center mb-4">Products</h2>
           <p className="max-w-4xl text-center mx-auto mb-12 text-xl">Whether you're a beginner or a pro, our presets are designed to enhance your photos with beautiful tones and a unique style—helping you achieve the look you love with just few clicks.</p>
-          <Columns>
+          <Columns columns="3">
             {edges.map((column: any, i: number) => {
               const { published, slug, featuredImage } = column.node?.frontmatter;
 
