@@ -39,7 +39,7 @@ const IndexPage: React.FC<PageProps> = ({ data }) => {
               const { published, slug, featuredImage } = column.node?.frontmatter;
 
               return (
-                published && <Column key={i} image={featuredImage} href={`/product/${slug}`} />
+                published && <Column key={i} image={featuredImage} href={`/product/${slug}`} itemId={slug}/>
               )
             })}
           </Columns>

@@ -8,6 +8,7 @@ import type { Image } from "../project-types";
 interface ColumnProps {
   image: Image;
   href: string;
+  itemId: number;
 }
 
 /*
@@ -15,14 +16,17 @@ interface ColumnProps {
  */
 
 const Column: React.FC<ColumnProps> = (props) => {
-  const { image, href } = props
+  const { image, href, itemId } = props
   let featuredImg = getImage(image?.childImageSharp?.gatsbyImageData)
-
+  
   return (
     <a
       href={href} 
       className={`column relative flex-1 w-full min-w-[30%] rounded overflow-hidden`}
-      onClick={() => sa_event("click_product")}
+      onClick={() =>{
+        sa_event(`click_product`);
+        sa_event(`click_product ${itemId}}`);
+      }}
     >
       <GatsbyImage image={featuredImg} alt={''} />
     </a>
