@@ -11,10 +11,11 @@ import Column from "../components/column";
 // Import Swiper styles
 import 'swiper/css';
 import '../styles/index.scss';
+import Newsletter from "../components/newsletter/newsletter";
 
 const IndexPage: React.FC<PageProps> = ({ data }) => {
   const { allMarkdownRemark: {edges} } = data 
-  const [ref, isVisible] = useInView();
+  // const [ref, isVisible] = useInView();
 
   return (
     <>
@@ -26,10 +27,7 @@ const IndexPage: React.FC<PageProps> = ({ data }) => {
 
         <div className="container-white px-5 pt-12 lg:pt-24 rounded-b-2xl">
 
-          {/* Newsletter  TODO: make a component*/}
-          <h2 className={`text-center mb-8${isVisible ? ' font-bold' : ''}`} ref={ref}>Newsletter</h2>
-          <p className="max-w-4xl text-center mx-auto mb-4 text-xl">Join our newsletter and unlock a free <b>6-pack of Lightroom presets</b>—designed to make your photos stand out. Plus, get insider editing tips and VIP discounts!</p>
-          <div className="text-center ml-embedded pb-12 lg:pb-32" data-form="ndBhtT"></div>
+          <Newsletter />
 
           {/* Portfolio */}
           <h2 className="text-center mb-4">Products</h2>

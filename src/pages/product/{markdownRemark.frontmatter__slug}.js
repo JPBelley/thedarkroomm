@@ -5,7 +5,8 @@ import { getImage } from "gatsby-plugin-image"
 import Layout from "../../components/layout/layout";
 import Hero from "../../components/hero-product/hero"
 import Button from "../../design-system/button/button";
-import PresetCarousel from '../../components/preset-carousel/preset-carousel'
+import PresetCarousel from '../../components/preset-carousel/preset-carousel';
+import Newsletter from "../../components/newsletter/newsletter";
 
 const ProductPostTemplate = ({ data }) => {
   const { markdownRemark } = data // data.markdownRemark holds your post data
@@ -67,9 +68,7 @@ const ProductPostTemplate = ({ data }) => {
 
           {/* Newsletter  */}
           <section className="px-5">
-            <h2 className="text-center mb-8">Newsletter</h2>
-            <p className="max-w-4xl text-center mx-auto mb-4 text-xl">Join our newsletter and unlock a free <b>6-pack of Lightroom presets</b>—designed to make your photos stand out. Plus, get insider editing tips and VIP discounts!</p>
-            <div className="text-center ml-embedded pb-12 lg:pb-32" data-form="ndBhtT"></div>
+            <Newsletter />
           </section>
         </div>
 
