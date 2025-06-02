@@ -11,7 +11,7 @@ import Column from "../components/column";
 // Import Swiper styles
 import 'swiper/css';
 import '../styles/index.scss';
-import Newsletter from "../components/newsletter/newsletter";
+import Newsletter from "../components/newsletter/Newsletter";
 
 const IndexPage: React.FC<PageProps> = ({ data }) => {
   const { allMarkdownRemark: {edges} } = data 

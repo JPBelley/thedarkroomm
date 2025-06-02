@@ -6,7 +6,7 @@ import Layout from "../../components/layout/layout";
 import Hero from "../../components/hero-product/hero"
 import Button from "../../design-system/button/button";
 import PresetCarousel from '../../components/preset-carousel/preset-carousel';
-import Newsletter from "../../components/newsletter/newsletter";
+import Newsletter from "../../components/newsletter/Newsletter";
 
 const ProductPostTemplate = ({ data }) => {
   const { markdownRemark } = data // data.markdownRemark holds your post data
