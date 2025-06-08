@@ -32,7 +32,7 @@ const Hero: React.FC<HeroProps> = ({title}) => {
         />
       </h1>
       
-      <img className="object-cover rounded-2xl w-full max-h-[700px]" height={2000} width={3000} src={ConconDune} alt="Concon Dunes" loading="eager"/>
+      <img className="object-cover rounded-t-2xl w-full max-h-[700px]" height={2000} width={3000} src={ConconDune} alt="Lanscape preset" loading="eager"/>
     </div>
   );
 }

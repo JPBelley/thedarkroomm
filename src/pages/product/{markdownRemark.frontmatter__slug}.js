@@ -62,7 +62,7 @@ const ProductPostTemplate = ({ data }) => {
               color="dark"
               link={frontmatter.etsyLink}
               target="_blank"
-              // onClick={() => sa_event("click_product")}
+              // onClick={() => sa_event("buy_now")}
             />
           </section>
 

@@ -17,6 +17,14 @@
     color: var(--black);
 }
 
+.container-dark {
+    max-width: 1680px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--black);
+    color: var(--white);
+}
+
 .container-content {
 
     h1, h2, h3, h4, h5, h6, p {
