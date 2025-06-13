@@ -1,4 +1,5 @@
 // General
+@use './tailwind.css';
 @use './base/fonts.scss';
 @use './base/root.scss';
 @use './base/reset.scss';
@@ -16,4 +17,4 @@
 @use '../components/nav/nav.scss';
 
 // Templates
-@use '../pages/product/product.scss'
+@use '../pages/product/product.scss';
