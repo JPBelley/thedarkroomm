@@ -7,7 +7,7 @@ interface ColumnsProps {
 }
 
 const Columns = ({ children, gap = "4", columns = "2" }: ColumnsProps) => {
-  const classesTemps = ['grid-cols-2', 'grid-cols-3'];
+  const classesTemps = ['grid-cols-2', 'grid-cols-3', 'gap-16'];
  
   return (
     <>

@@ -21,18 +21,6 @@ const IndexPage: React.FC<PageProps> = ({ data }) => {
   return (
     <>
       <Layout>
-        {/* Hero */}
-        <Hero
-          title="The Darkroomm"
-        />
-
-        <div className="container-white px-5 pt-12 lg:pt-24 rounded-b-2xl">
-
-          <Newsletter />
-
-        </div>
-
-        <MonthlyCTA />
         
         <div className="container-white px-5 pt-12 lg:pt-24 rounded-2xl">
 
@@ -49,8 +37,8 @@ const IndexPage: React.FC<PageProps> = ({ data }) => {
             })}
           </Columns>
 
+          <Newsletter />
         </div>
-
       </Layout>
     </>
   )

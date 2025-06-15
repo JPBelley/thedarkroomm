@@ -25,13 +25,15 @@ const Hero: React.FC<HeroProps> = ({title}) => {
 
   return (
     <div className={`hero container relative flex items-center justify-center flex-col text-center`}>
-      <h1 className="mt-2 mb-16">
+      <h1 className="mt-2 mb-4">
         <SpanText 
           text={title}
           delay={.04}
         />
+        {/* {title} */}
       </h1>
-      
+      {/* <p className="mb-16 text-2xl">Designed to help you create with purpose.</p> */}
+
       <img className="object-cover rounded-t-2xl w-full max-h-[700px]" height={2000} width={3000} src={ConconDune} alt="Lanscape preset" loading="eager"/>
     </div>
   );
