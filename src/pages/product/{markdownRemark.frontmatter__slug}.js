@@ -6,6 +6,7 @@ import Layout from "../../components/layout/layout";
 import Hero from "../../components/hero-product/hero"
 import Button from "../../design-system/button/button";
 import PresetCarousel from '../../components/preset-carousel/preset-carousel';
+import MonthlyCTA from "../../components/monthly-cta/monthly-cta";
 import Newsletter from "../../components/newsletter/Newsletter";
 
 const ProductPostTemplate = ({ data }) => {
@@ -65,7 +66,11 @@ const ProductPostTemplate = ({ data }) => {
               // onClick={() => sa_event("buy_now")}
             />
           </section>
+        </div>
 
+        <MonthlyCTA />
+        
+        <div className="container-white px-5 pt-12 lg:pt-24 rounded-2xl">
           {/* Newsletter  */}
           <section className="px-5">
             <Newsletter />
