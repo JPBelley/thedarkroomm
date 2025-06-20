@@ -25,7 +25,7 @@ const Hero: React.FC<HeroProps> = ({title}) => {
 
   return (
     <div className={`hero container relative flex items-center justify-center flex-col text-center`}>
-      <h1 className="mt-2 mb-4">
+      <h1 className="mt-8 mb-8">
         <SpanText 
           text={title}
           delay={.04}

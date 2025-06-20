@@ -13,7 +13,11 @@ module.exports = {
     ],
   },
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'soft-black': 'var(--soft-black)',
+      },
+    },
   },
   plugins: [],
 }
