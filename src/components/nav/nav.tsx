@@ -24,7 +24,7 @@ const Nav: React.FC = () => {
     }, [lastScrollY]);
 
     return (
-        <div className={`container sticky top-3 flex px-5 z-10 transition-transform duration-500 ${show ? 'translate-y-0' : '-translate-y-60'}`}>
+        <div className={`container sticky top-4 flex px-5 z-10 transition-transform duration-500 ${show ? 'translate-y-0' : '-translate-y-60'}`}>
             <nav className="flex mx-auto bg-black items-center justify-between border rounded-md overflow-hidden ">
                 <a className="flex items-center h-16 px-3 uppercase hover:bg-soft-black transition-colors duration-200 rounded-md overflow-hidden" href="/">
                     <Logo  width="40" height="60"/>
