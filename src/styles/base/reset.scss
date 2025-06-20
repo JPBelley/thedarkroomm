@@ -7,8 +7,8 @@ body {
 }
 
 main {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: var(--padding-global);
+    padding-right: var(--padding-global);
 }
 
 img {
