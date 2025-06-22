@@ -11,7 +11,7 @@ import MonthlyCTA from "../components/monthly-cta/monthly-cta";
 
 // Import Swiper styles
 import 'swiper/css';
-import '../styles/index.scss';
+// import '../styles/index.scss';
 import Newsletter from "../components/newsletter/Newsletter";
 
 const IndexPage: React.FC<PageProps> = ({ data }) => {

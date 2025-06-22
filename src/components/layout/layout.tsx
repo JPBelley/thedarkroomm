@@ -1,6 +1,7 @@
 import React from "react";
 import Footer from "../footer/footer"
 import Nav from "../nav/nav";
+import '../../styles/index.scss';
 
 type LayoutProps = {
     children: React.ReactNode;
