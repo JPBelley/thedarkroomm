@@ -26,9 +26,6 @@ const IndexPage: React.FC<PageProps> = ({ data }) => {
           description="Whether you're a beginner or a pro, our presets are designed to enhance your photos with beautiful tones and a unique style—helping you achieve the look you love with just few clicks."
         />
         <div className="container-white px-5 pt-12 lg:pt-24 rounded-2xl">
-
-          {/* Products */}
-          <p className="max-w-4xl text-center mx-auto mb-12 text-xl">Whether you're a beginner or a pro, our presets are designed to enhance your photos with beautiful tones and a unique style—helping you achieve the look you love with just few clicks.</p>
           <Columns columns="3">
             {edges.map((column: any, i: number) => {
               const { published, slug, featuredImage } = column.node?.frontmatter;
@@ -39,6 +36,11 @@ const IndexPage: React.FC<PageProps> = ({ data }) => {
             })}
           </Columns>
 
+        </div>
+
+        <MonthlyCTA />
+        
+        <div className="container-white px-5 pt-12 lg:pt-24 rounded-2xl">
           <Newsletter />
         </div>
       </Layout>

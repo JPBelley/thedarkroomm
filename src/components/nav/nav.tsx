@@ -25,15 +25,25 @@ const Nav: React.FC = () => {
 
     return (
         <div className={`container sticky top-4 flex px-5 z-10 transition-transform duration-500 ${show ? 'translate-y-0' : '-translate-y-60'}`}>
-            <nav className="flex mx-auto bg-black items-center justify-between border rounded-md overflow-hidden ">
-                <a className="flex items-center h-16 px-3 uppercase hover:bg-soft-black transition-colors duration-200 rounded-md overflow-hidden" href="/">
+            <nav className="flex mx-auto bg-soft-black items-center justify-between border rounded-md overflow-hidden ">
+                <a 
+                    className="flex items-center h-14 bg-black px-3 uppercase hover:bg-soft-black transition-colors duration-200 rounded-md overflow-hidden" href="/"
+                    onClick={() => sa_event("menu_home")}
+                >
                     <Logo  width="40" height="60"/>
                 </a>
                 <div className="flex justify-end">
-                    <a className="flex items-center h-16 px-6 uppercase hover:bg-soft-black transition-colors duration-200 rounded-md overflow-hidden" href="/products">
+                    <a 
+                        className="flex items-center h-14 px-6 uppercase hover:bg-black transition-colors duration-200 rounded-md" href="/products"
+                        onClick={() => sa_event("menu_product")}
+                    >
                         Products
                     </a>
-                    <a className="flex items-center h-16 px-6 uppercase hover:bg-soft-black transition-colors duration-200 rounded-md overflow-hidden" href="https://thedarkroomm.gumroad.com/l/monthly-lightroom-presets" target="_blank">
+                    <a 
+                        className="flex items-center h-14 px-6 uppercase hover:bg-black transition-colors duration-200 rounded-md" href="https://thedarkroomm.gumroad.com/l/monthly-lightroom-presets" 
+                        target="_blank"
+                        onClick={() => sa_event("menu_subscribe")}
+                    >
                         Subscribe
                     </a>
                 </div>
