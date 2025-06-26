@@ -61,7 +61,10 @@ export { Head } from "../seo/head"
 
 export const pageQuery = graphql`
   query Products {
-    allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
+    allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/products/" } }
+      sort: { frontmatter: { date: DESC } }
+    ) {
       edges {
         node {
           id
