@@ -8,8 +8,9 @@ const Nav: React.FC = () => {
     React.useEffect(() => {
         const handleScroll = () => {
             const currentScrollY = window.scrollY;
+            console.log(currentScrollY);
 
-            if (currentScrollY > lastScrollY) {
+            if (currentScrollY > lastScrollY && currentScrollY > 20) {
                 setTimeout(() => setShow(false), 300); // scrolling down
             } else {
                 setTimeout(() => setShow(true), 300);  // scrolling up
