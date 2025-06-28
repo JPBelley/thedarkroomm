@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 slug: "landscape-tokyo-collection"
 date: "2025-06-28"
 title: "Landscape Tokyo Collection"
