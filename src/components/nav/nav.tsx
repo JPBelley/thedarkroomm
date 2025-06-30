@@ -41,7 +41,7 @@ const Nav: React.FC = () => {
                     </a>
                     <a 
                         className="flex items-center h-14 px-6 uppercase hover:bg-black transition-colors duration-200 rounded-md" href="https://thedarkroomm.gumroad.com/l/monthly-lightroom-presets" 
-                        target="_blank"
+                        // target="_blank"
                         onClick={() => sa_event("menu_subscribe")}
                     >
                         Subscribe
