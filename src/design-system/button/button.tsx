@@ -5,10 +5,11 @@ interface ButtonType {
     color?: string;
     link?: string;
     target?: string;
-    onClick?: () => void; 
+    download: boolean;
+    onClick?: () => void;
 }
 
-const Button: React.FC<ButtonType> = ({ text, color = "light", link, target = "_self", onClick}) => {
+const Button: React.FC<ButtonType> = ({ text, color = "light", link, target = "_self", download = false, onClick}) => {
     const Tag = !link ? "button" : "a";
 
     return (
@@ -17,6 +18,7 @@ const Button: React.FC<ButtonType> = ({ text, color = "light", link, target = "_
             href={link}
             target={target}
             onClick={onClick}
+            download={download}
         >
             {text}
         </Tag>
