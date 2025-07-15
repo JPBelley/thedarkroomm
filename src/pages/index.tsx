@@ -64,6 +64,7 @@ export const pageQuery = graphql`
     allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "/products/" } }
       sort: { frontmatter: { date: DESC } }
+      limit: 6
     ) {
       edges {
         node {
