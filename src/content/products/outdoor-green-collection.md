@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 slug: "outdoor-green-collection"
 date: "2025-07-15"
 title: "Outdoor Green Collection"
