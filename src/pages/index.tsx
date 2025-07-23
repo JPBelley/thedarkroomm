@@ -25,10 +25,14 @@ const IndexPage: React.FC<PageProps> = ({ data }) => {
           title="The Darkroomm"
         />
 
+        {/* <section className="container-black px-5 pt-12 lg:pt-28">
+          <Columns columns="2" gap="16">
+          </Columns>
+        </section> */}
+
+
         <div className="container-white px-5 pt-12 lg:pt-24 rounded-b-2xl">
-
           <Newsletter />
-
         </div>
 
         <MonthlyCTA />
@@ -36,7 +40,7 @@ const IndexPage: React.FC<PageProps> = ({ data }) => {
         <div className="container-white px-5 pt-12 lg:pt-24 rounded-2xl">
 
           {/* Products */}
-          <h2 className="text-center mb-4">Products</h2>
+          <h2 className="text-center mb-4">Latest products</h2>
           <p className="max-w-4xl text-center mx-auto mb-12 text-xl">Whether you're a beginner or a pro, our presets are designed to enhance your photos with beautiful tones and a unique style—helping you achieve the look you love with just few clicks.</p>
           <Columns columns="3">
             {edges.map((column: any, i: number) => {
@@ -62,8 +66,8 @@ export { Head } from "../seo/head"
 export const pageQuery = graphql`
   query Products {
     allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/products/" } }
-      sort: { frontmatter: { date: DESC } }
+      filter: {fileAbsolutePath: {regex: "/products/"}, frontmatter: {published: {eq: true}}}
+      sort: {frontmatter: {date: DESC}}
       limit: 6
     ) {
       edges {

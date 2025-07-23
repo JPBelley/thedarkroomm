@@ -5,7 +5,7 @@ interface ButtonType {
     color?: string;
     link?: string;
     target?: string;
-    download: boolean;
+    download?: boolean;
     onClick?: () => void;
 }
 
