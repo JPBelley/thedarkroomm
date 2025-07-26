@@ -3,7 +3,7 @@ published: true
 slug: landscape-collection
 date: 2025-02-02
 title: Landscape Collection
-etsyLink: https://thedarkroomfactory.etsy.com/ca/listing/1819820658/15-landscape-lightroom-presets-lightroom
+productLink: https://thedarkroomfactory.etsy.com/ca/listing/1819820658/15-landscape-lightroom-presets-lightroom
 featuredImage: ../images/product-0/landscape-cover.jpg
 heroImage: ../images/product-0/website-cover.jpg
 videoHeading: Capture the beauty of the great outdoors with the Landscape Preset Collection

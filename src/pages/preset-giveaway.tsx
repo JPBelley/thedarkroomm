@@ -62,7 +62,7 @@ export const pageQuery = graphql`
             published
             slug
             title
-            etsyLink
+            productLink
             featuredImage {
               childImageSharp {
                 gatsbyImageData(width: 600)
