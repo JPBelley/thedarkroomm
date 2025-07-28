@@ -15,7 +15,8 @@ import Newsletter from "../components/newsletter/Newsletter";
 import FeaturedCreator from "../components/featured-creator/featured-creator";
 
 const IndexPage: React.FC<PageProps> = ({ data }) => {
-  const { allMarkdownRemark: {edges} } = data 
+  const { allMarkdownRemark: { edges }, allStrapiHomepage } = data 
+  
   // const [ref, isVisible] = useInView();
 
   return (
@@ -23,7 +24,7 @@ const IndexPage: React.FC<PageProps> = ({ data }) => {
       <Layout>
         {/* Hero */}
         <Hero
-          title="The Darkroomm"
+          title={allStrapiHomepage.nodes[0].Title}
         />
 
         <FeaturedCreator />
@@ -61,7 +62,7 @@ export default IndexPage
 export { Head } from "../seo/head"
 
 export const pageQuery = graphql`
-  query Products {
+  query Homepage {
     allMarkdownRemark(
       filter: {fileAbsolutePath: {regex: "/products/"}, frontmatter: {published: {eq: true}}}
       sort: {frontmatter: {date: DESC}}
@@ -82,6 +83,11 @@ export const pageQuery = graphql`
             }
           }
         }
+      }
+    }
+    allStrapiHomepage {
+      nodes {
+        Title
       }
     }
   }

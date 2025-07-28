@@ -54,7 +54,17 @@ const config: GatsbyConfig = {
         include: /assets/
       }
     }
-  }],
+    },
+    {
+      resolve: "gatsby-source-strapi",
+      options: {
+        apiURL: "http://127.0.0.1:1337", // or your deployed Strapi URL
+        accessToken: process.env.STRAPI_TOKEN,
+        collectionTypes: ["product"], // your Strapi collection names
+        singleTypes: ["homepage", "about"], // optional
+        // queryLimit: 1000,
+      },
+    }],
   pathPrefix: "",
 };
 
