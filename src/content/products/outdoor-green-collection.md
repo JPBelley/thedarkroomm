@@ -3,7 +3,7 @@ published: true
 slug: "outdoor-green-collection"
 date: "2025-07-15"
 title: "Outdoor Green Collection"
-etsyLink: "https://thedarkroomfactory.etsy.com/listing/4331880998"
+productLink: "https://thedarkroomfactory.etsy.com/listing/4331880998"
 featuredImage: ../images/outdoor-green-collection/feature-img.jpg
 heroImage: ../images/outdoor-green-collection/website-cover.jpg
 presetQuantity: 10

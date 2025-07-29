@@ -1,6 +1,7 @@
 import * as React from "react"
 import type { PageProps } from "gatsby"
 import { graphql } from "gatsby"
+import { getImage } from "gatsby-plugin-image"
 // import useInView from "../utils/use-in-view";
 
 import Layout from "../components/layout/layout";
@@ -12,9 +13,11 @@ import MonthlyCTA from "../components/monthly-cta/monthly-cta";
 // Import Swiper styles
 import 'swiper/css';
 import Newsletter from "../components/newsletter/Newsletter";
+import FeaturedCreator from "../components/featured-creator/featured-creator";
 
 const IndexPage: React.FC<PageProps> = ({ data }) => {
-  const { allMarkdownRemark: {edges} } = data 
+  const { allMarkdownRemark: { edges }, allStrapiHomepage } = data 
+  const heroImgData = getImage(allStrapiHomepage.nodes[0].heroImage.localFile.childrenImageSharp[0].gatsbyImageData);
   // const [ref, isVisible] = useInView();
 
   return (
@@ -22,16 +25,13 @@ const IndexPage: React.FC<PageProps> = ({ data }) => {
       <Layout>
         {/* Hero */}
         <Hero
-          title="The Darkroomm"
+          title={allStrapiHomepage.nodes[0].Title}
+          image={heroImgData}
         />
 
-        {/* <section className="container-black px-5 pt-12 lg:pt-28">
-          <Columns columns="2" gap="16">
-          </Columns>
-        </section> */}
+        <FeaturedCreator />
 
-
-        <div className="container-white px-5 pt-12 lg:pt-24 rounded-b-2xl">
+        <div className="container-white px-5 pt-12 lg:pt-24 rounded-2xl">
           <Newsletter />
         </div>
 
@@ -64,7 +64,7 @@ export default IndexPage
 export { Head } from "../seo/head"
 
 export const pageQuery = graphql`
-  query Products {
+  query Homepage {
     allMarkdownRemark(
       filter: {fileAbsolutePath: {regex: "/products/"}, frontmatter: {published: {eq: true}}}
       sort: {frontmatter: {date: DESC}}
@@ -77,11 +77,23 @@ export const pageQuery = graphql`
             published
             slug
             title
-            etsyLink
+            productLink
             featuredImage {
               childImageSharp {
                 gatsbyImageData(width: 600)
               }
+            }
+          }
+        }
+      }
+    }
+    allStrapiHomepage {
+      nodes {
+        Title
+        heroImage {
+          localFile {
+            childrenImageSharp {
+              gatsbyImageData(width: 2400)
             }
           }
         }

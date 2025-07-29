@@ -3,7 +3,7 @@ published: true
 slug: "landscape-bali-collection"
 date: "2025-05-24"
 title: "Landscape Bali Collection"
-etsyLink: "https://thedarkroomfactory.etsy.com/ca/listing/4303233411/10-landscape-bali-presets-outdoor"
+productLink: "https://thedarkroomfactory.etsy.com/ca/listing/4303233411/10-landscape-bali-presets-outdoor"
 featuredImage: ../images/product-3/feature-img.jpg
 heroImage: ../images/product-3/website-cover.jpg
 ---

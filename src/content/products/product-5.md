@@ -3,7 +3,7 @@ published: true
 slug: "landscape-tokyo-collection"
 date: "2025-06-28"
 title: "Landscape Tokyo Collection"
-etsyLink: "https://thedarkroomfactory.etsy.com/ca/listing/4322881888/10-lightroom-presets-tokyo-urban"
+productLink: "https://thedarkroomfactory.etsy.com/ca/listing/4322881888/10-lightroom-presets-tokyo-urban"
 featuredImage: ../images/product-5/feature-img.jpg
 heroImage: ../images/product-5/website-cover.jpg
 presetQuantity: 10

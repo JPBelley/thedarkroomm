@@ -35,7 +35,7 @@ const ProductPostTemplate = ({ data }) => {
                 <Button
                   text="Buy now"
                   color="dark"
-                  link={frontmatter.etsyLink}
+                  link={frontmatter.productLink}
                   target="_blank"
                   // onClick={() => sa_event("click_product")}
                 />
@@ -61,7 +61,7 @@ const ProductPostTemplate = ({ data }) => {
             <Button
               text="Buy now"
               color="dark"
-              link={frontmatter.etsyLink}
+              link={frontmatter.productLink}
               target="_blank"
               // onClick={() => sa_event("buy_now")}
             />
@@ -94,7 +94,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         slug
         title
-        etsyLink
+        productLink
         videoHeading
         video
         heroImage {

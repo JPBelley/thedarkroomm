@@ -3,7 +3,7 @@ published: true
 slug: "urban-san-francisco-collection"
 date: "2025-07-29"
 title: "Urban San Francisco Collection"
-etsyLink: "https://thedarkroomfactory.etsy.com/listing/4339270736"
+productLink: "https://thedarkroomfactory.etsy.com/listing/4339270736"
 featuredImage: ../images/urban-san-francisco-collection/feature-img.jpg
 heroImage: ../images/urban-san-francisco-collection/website-cover.jpg
 presetQuantity: 10

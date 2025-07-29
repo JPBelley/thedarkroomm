@@ -3,7 +3,7 @@ published: true
 slug: "landscape-hawaii-collection"
 date: "2025-05-31"
 title: "Landscape Hawaii Collection"
-etsyLink: "https://thedarkroomfactory.etsy.com/listing/4313127465"
+productLink: "https://thedarkroomfactory.etsy.com/listing/4313127465"
 featuredImage: ../images/product-4/feature-img.jpg
 heroImage: ../images/product-4/website-cover.jpg
 videoHeading: Capture the untamed beauty of the Hawaiian islands with the Landscape Hawaii Collection
