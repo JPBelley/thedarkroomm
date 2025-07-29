@@ -1,35 +1,34 @@
 ---
-published: false
+published: true
 slug: "urban-new-york-collection"
 date: "2025-08-05"
 title: "Urban New York Collection"
-# productLink: "https://thedarkroomfactory.etsy.com/listing/4339270736"
-# featuredImage: ../images/urban-new-york-collection/feature-img.jpg
-# heroImage: ../images/urban-new-york-collection/website-cover.jpg
+productLink: "https://thedarkroomfactory.etsy.com/listing/1794541809"
+featuredImage: ../images/urban-new-york-collection/feature-img.jpg
+heroImage: ../images/urban-new-york-collection/website-cover.jpg
 presetQuantity: 10
 videoHeading: Bold. Gritty. Timeless.
 # video: /videos/urban-sf.mp4
+creator: "jp-belley"
 ---
 ## URBAN New York Collection
-<!-- 
-Bring the mood of the city by the bay to your edits with this cinematic collection designed for street photographers, urban explorers, and low-light lovers. From fog-draped skylines and glowing streetcars to pastel Victorian homes and gritty alleyways, these presets highlight rich contrasts, deep shadows, and cool-toned ambiance—perfect for a moody, West Coast aesthetic with a modern edge.
+
+Bring the cinematic pulse of the city that never sleeps to your edits with this moody collection built for street photographers, night owls, and lovers of urban grit. From steam-filled streets and flickering subway lights to glistening crosswalks and skyline silhouettes, these presets highlight bold contrasts, deep shadows, and cool urban tones—ideal for crafting a modern, East Coast aesthetic with dramatic edge.
 
 <div style="margin-top: 50px;"></div>
-
 ## WHAT’S INSIDE?
-- 10 Mobile Presets – Edit on the go with quick, dramatic results.
-- 10 Desktop Presets – Take full creative control with Lightroom.
-- Easy-to-Follow Instructions – Get started in minutes.
-- Instant Download – Start editing your New York shots right away.
+- 10 Mobile Presets – Edit on the go with gritty, impactful looks.
+- 10 Desktop Presets – Dial in every detail with Lightroom on desktop.
+- Easy-to-Follow Instructions – Get started fast and edit with confidence.
+- Instant Download – Transform your New York photos immediately.
 
 <div style="margin-top: 50px;"></div>
-
 ## Perfect for scenes like:
-- Foggy streets in the Mission or Castro at dawn
-- Moody cityscapes with glowing streetlights and neon signs
-- Sunset views from Twin Peaks or the Golden Gate Overlook
-- Gritty alleyways, graffiti walls, and urban textures
-- Early morning shots of cable cars and quiet sidewalks
-- Overcast days with dramatic lighting and soft shadows
+- Steam rising from manholes in early morning SoHo
+- Neon-lit nights in Times Square or Chinatown
+- Rainy sidewalks reflecting headlights and street signs
+- Moody subway stations and late-night commutes
+- Rooftop views of the Manhattan skyline at dusk
+- Urban portraits in shadowy alleys and fire escapes
 
-Inspired by the cinematic atmosphere of the Bay Area—its fog, neon, and timeless streets—this collection is perfect for crafting bold, immersive visuals that echo the soul of the city. -->
+Inspired by the cinematic energy of New York City—its shadows, steel, and sleepless rhythm—this collection is made for creating bold, atmospheric visuals that feel as real and raw as the city itself.
