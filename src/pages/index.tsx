@@ -1,6 +1,7 @@
 import * as React from "react"
 import type { PageProps } from "gatsby"
 import { graphql } from "gatsby"
+import { getImage } from "gatsby-plugin-image"
 // import useInView from "../utils/use-in-view";
 
 import Layout from "../components/layout/layout";
@@ -16,7 +17,7 @@ import FeaturedCreator from "../components/featured-creator/featured-creator";
 
 const IndexPage: React.FC<PageProps> = ({ data }) => {
   const { allMarkdownRemark: { edges }, allStrapiHomepage } = data 
-  
+  const heroImgData = getImage(allStrapiHomepage.nodes[0].heroImage.localFile.childrenImageSharp[0].gatsbyImageData);
   // const [ref, isVisible] = useInView();
 
   return (
@@ -25,6 +26,7 @@ const IndexPage: React.FC<PageProps> = ({ data }) => {
         {/* Hero */}
         <Hero
           title={allStrapiHomepage.nodes[0].Title}
+          image={heroImgData}
         />
 
         <FeaturedCreator />
@@ -88,6 +90,13 @@ export const pageQuery = graphql`
     allStrapiHomepage {
       nodes {
         Title
+        heroImage {
+          localFile {
+            childrenImageSharp {
+              gatsbyImageData(width: 2400)
+            }
+          }
+        }
       }
     }
   }
