@@ -43,7 +43,7 @@ const FeaturedCreator: React.FC = ({ }) => {
   return (
     <>
       {/* Featured Creator */ }
-      <section className = "container-black px-5 pt-12 lg:pt-28" >
+      <section className = "container-black px-5 pt-12 lg:pt-28">
         <Columns columns="2" gap="16">
           <div className="text-left flex flex-col justify-center gap-4">
             <GatsbyImage

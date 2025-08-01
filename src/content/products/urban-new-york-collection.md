@@ -3,7 +3,7 @@ published: true
 slug: "urban-new-york-collection"
 date: "2025-08-05"
 title: "Urban New York Collection"
-productLink: "https://thedarkroomfactory.etsy.com/listing/1794541809"
+productLink: "https://thedarkroomm.gumroad.com/l/urban-new-york-collection"
 featuredImage: ../images/urban-new-york-collection/feature-img.jpg
 heroImage: ../images/urban-new-york-collection/website-cover.jpg
 presetQuantity: 10
