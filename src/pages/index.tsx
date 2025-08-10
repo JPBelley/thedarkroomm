@@ -16,10 +16,10 @@ import Newsletter from "../components/newsletter/Newsletter";
 import FeaturedCreator from "../components/featured-creator/featured-creator";
 
 const IndexPage: React.FC<PageProps> = ({ data }) => {
-  const { allMarkdownRemark: { edges }, allStrapiHomepage } = data 
+  const { allMarkdownRemark: { edges }, allStrapiHomepage, allStrapiProduct: {nodes} } = data 
   const heroImgData = getImage(allStrapiHomepage.nodes[0].heroImage.localFile.childrenImageSharp[0].gatsbyImageData);
   // const [ref, isVisible] = useInView();
-
+  
   return (
     <>
       <Layout>
@@ -43,11 +43,13 @@ const IndexPage: React.FC<PageProps> = ({ data }) => {
           <h2 className="text-center mb-4">Latest products</h2>
           <p className="max-w-4xl text-center mx-auto mb-12 text-xl">Whether you're a beginner or a pro, our presets are designed to enhance your photos with beautiful tones and a unique style—helping you achieve the look you love with just few clicks.</p>
           <Columns columns="3">
-            {edges.map((column: any, i: number) => {
-              const { published, slug, featuredImage } = column.node?.frontmatter;
-
+            {nodes.map((column: any, i: number) => {
+              // const { published, slug, featuredImage } = column.node?.frontmatter;
+              const { featuredImage, Slug } = column;
+              
               return (
-                published && <Column key={i} image={featuredImage} href={`/product/${slug}`} itemId={slug}/>
+                // <Column key={i} image={featuredImage} href={`/product/${slug}`} itemId={slug}/>
+                <Column key={i} image={featuredImage} href={`/product/${Slug}`} itemId={''}/>
               )
             })}
           </Columns>
@@ -82,6 +84,19 @@ export const pageQuery = graphql`
               childImageSharp {
                 gatsbyImageData(width: 600)
               }
+            }
+          }
+        }
+      }
+    }
+    allStrapiProduct {
+      nodes {
+        productLink
+        Slug
+        featuredImage {
+          localFile {
+            childImageSharp {
+              gatsbyImageData(width: 600)
             }
           }
         }
