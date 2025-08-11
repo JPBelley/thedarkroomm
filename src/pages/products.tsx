@@ -11,7 +11,7 @@ import MonthlyCTA from "../components/monthly-cta/monthly-cta";
 import Newsletter from "../components/newsletter/Newsletter";
 
 const IndexPage: React.FC<PageProps> = ({ data }) => {
-  const { allMarkdownRemark: {edges} } = data 
+  const { allStrapiProduct: { nodes } } = data;
 
   return (
     <>
@@ -22,11 +22,11 @@ const IndexPage: React.FC<PageProps> = ({ data }) => {
         />
         <div className="container-white px-5 pt-12 lg:pt-24 rounded-2xl">
           <Columns columns="4">
-            {edges.map((column: any, i: number) => {
-              const { published, slug, featuredImage } = column.node?.frontmatter;
+            {nodes.map((column: any, i: number) => {
+              const { featuredImage, Slug } = column;
 
               return (
-                published && <Column key={i} image={featuredImage} href={`/product/${slug}`} itemId={slug}/>
+                <Column key={i} image={featuredImage} href={`/product/${Slug}`} itemId={Slug} />
               )
             })}
           </Columns>
@@ -49,22 +49,16 @@ export { Head } from "../seo/head"
 
 export const pageQuery = graphql`
   query Products {
-    allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/products/" } }
-      sort: { frontmatter: { date: DESC } }
-    ) {
-      edges {
-        node {
-          id
-          frontmatter {
-            published
-            slug
-            title
-            productLink
-            featuredImage {
-              childImageSharp {
-                gatsbyImageData(width: 600)
-              }
+    allStrapiProduct(
+        sort: {createdAt: DESC}
+      ) {
+      nodes {
+        Slug
+        productLink
+        featuredImage {
+          localFile {
+            childImageSharp {
+              gatsbyImageData(width: 600)
             }
           }
         }

@@ -16,7 +16,7 @@ import Newsletter from "../components/newsletter/Newsletter";
 import FeaturedCreator from "../components/featured-creator/featured-creator";
 
 const IndexPage: React.FC<PageProps> = ({ data }) => {
-  const { allMarkdownRemark: { edges }, allStrapiHomepage, allStrapiProduct: {nodes} } = data 
+  const { allStrapiHomepage, allStrapiProduct: {nodes} } = data;
   const heroImgData = getImage(allStrapiHomepage.nodes[0].heroImage.localFile.childrenImageSharp[0].gatsbyImageData);
   // const [ref, isVisible] = useInView();
   
@@ -67,32 +67,13 @@ export { Head } from "../seo/head"
 
 export const pageQuery = graphql`
   query Homepage {
-    allMarkdownRemark(
-      filter: {fileAbsolutePath: {regex: "/products/"}, frontmatter: {published: {eq: true}}}
-      sort: {frontmatter: {date: DESC}}
-      limit: 6
-    ) {
-      edges {
-        node {
-          id
-          frontmatter {
-            published
-            slug
-            title
-            productLink
-            featuredImage {
-              childImageSharp {
-                gatsbyImageData(width: 600)
-              }
-            }
-          }
-        }
-      }
-    }
-    allStrapiProduct {
+    allStrapiProduct(
+        sort: {createdAt: DESC}
+        limit: 6
+      ) {
       nodes {
-        productLink
         Slug
+        productLink
         featuredImage {
           localFile {
             childImageSharp {
