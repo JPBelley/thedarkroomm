@@ -1,4 +1,5 @@
 const fetch = require("node-fetch");
+const path = require("path");
 
 exports.sourceNodes = async ({ actions, createNodeId, createContentDigest }) => {
     const { createNode } = actions;
@@ -22,6 +23,37 @@ exports.sourceNodes = async ({ actions, createNodeId, createContentDigest }) => 
             internal: {
                 type: "GumroadProducts",
                 contentDigest: createContentDigest(product),
+            },
+        });
+    });
+};
+
+exports.createPages = async ({ graphql, actions }) => {
+    const { createPage } = actions;
+    const productTemplate = path.resolve("src/templates/product.js");
+
+    const result = await graphql(`
+    {
+      allStrapiProduct {
+        nodes {
+          Slug
+        }
+      }
+    }
+  `);
+
+    if (result.errors) {
+        throw result.errors;
+    }
+
+    const products = result.data.allStrapiProduct.nodes;
+
+    products.forEach(product => {
+        createPage({
+            path: `/product/${product.Slug}`,
+            component: productTemplate,
+            context: {
+                slug: product.Slug
             },
         });
     });

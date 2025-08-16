@@ -43,7 +43,8 @@ const FeaturedCreator: React.FC = ({ }) => {
   return (
     <>
       {/* Featured Creator */ }
-      <section className = "container-black px-5 pt-12 lg:pt-28" >
+      <section className = "container-black px-5 pt-12 lg:pt-28">
+        <h2 className="text-center mt-0 mb-12">Featured creator</h2>
         <Columns columns="2" gap="16">
           <div className="text-left flex flex-col justify-center gap-4">
             <GatsbyImage
@@ -51,8 +52,8 @@ const FeaturedCreator: React.FC = ({ }) => {
               image={profileImgData} 
               alt={''} 
             />
-            <h2 className="mt-0 mb-4">Crafted by {name}, Built for Storytelling</h2>
             <div>
+            <h2 className="mt-0 mb-4">Crafted by {name}. Built for Storytelling</h2>
               <Button
                 text="Buy now"
                 color="dark"
