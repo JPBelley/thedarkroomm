@@ -21,6 +21,7 @@ const ProductPostTemplate = ({ data }) => {
         <Hero
           title={strapiProduct.Title}
           image={featuredImg}
+          creator={strapiProduct.creator}
         />
 
         <div className="container-white rounded-b-2xl">
@@ -97,6 +98,19 @@ export const pageQuery = graphql`
           children {
             text
           }
+        }
+      }
+      creator {
+        Avatar {
+          localFile {
+            childImageSharp {
+              gatsbyImageData(width: 75, height: 75, layout: FIXED)
+            }
+          }
+        }
+        informations {
+          FirstName
+          LastName
         }
       }
       heroImage {

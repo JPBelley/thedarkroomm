@@ -17,7 +17,6 @@ interface HeroProps {
  */
 
 const Hero: React.FC<HeroProps> = ({title, image}) => {
-  // console.log(image);
   
   return (
     <div className={`hero container relative flex items-center justify-center flex-col text-center`}>
