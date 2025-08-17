@@ -13,14 +13,14 @@ import RichTextRenderer from "../components/richTextRenderer/RichTextRenderer"
 const ProductPostTemplate = ({ data }) => {
   const { strapiProduct } = data // data.markdownRemark holds your post data
 
-  let featuredImg = getImage(strapiProduct.heroImage.localFile.childrenImageSharp[0].gatsbyImageData);
+  let heroImg = getImage(strapiProduct.heroImage.localFile.childrenImageSharp[0].gatsbyImageData);
   
   return (
     <Layout>
       <div>
         <Hero
           title={strapiProduct.Title}
-          image={featuredImg}
+          image={heroImg}
           creator={strapiProduct.creator}
         />
 
@@ -108,10 +108,9 @@ export const pageQuery = graphql`
             }
           }
         }
-        informations {
-          FirstName
-          LastName
-        }
+        FirstName
+        LastName
+        Slug
       }
       heroImage {
         localFile {

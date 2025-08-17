@@ -16,13 +16,7 @@ const FeaturedCreator: React.FC = ({ }) => {
           node {
             frontmatter {
               published
-              name
               productLink
-              profileImage {
-                childImageSharp {
-                  gatsbyImageData(width: 150, layout: FIXED)
-                }
-              }
               featuredImage {
                 childImageSharp {
                   gatsbyImageData(width: 600)
@@ -33,12 +27,25 @@ const FeaturedCreator: React.FC = ({ }) => {
           }
         }
       }
+      strapiCreator(Slug: {eq: "jp-belley"}) {
+        FirstName
+        LastName
+        Slug
+        Avatar {
+          localFile {
+            childImageSharp {
+              gatsbyImageData(width: 150, layout: FIXED)
+            }
+          }
+        }
+      }
     }
   `)
 
-  const { name, profileImage, featuredImage, productLink } = data.allMarkdownRemark.edges[0].node.frontmatter;
-  const profileImgData = getImage(profileImage.childImageSharp)
+  const { featuredImage, productLink } = data.allMarkdownRemark.edges[0].node.frontmatter;
+  const { FirstName, LastName, Avatar, Slug } = data.strapiCreator;
   const featuredImageData = getImage(featuredImage.childImageSharp)
+  const creatorImg = getImage(Avatar.localFile.childImageSharp.gatsbyImageData);
 
   return (
     <>
@@ -47,13 +54,14 @@ const FeaturedCreator: React.FC = ({ }) => {
         <h2 className="text-center mt-0 mb-12">Featured creator</h2>
         <Columns columns="2" gap="16">
           <div className="text-left flex flex-col justify-center gap-4">
-            <GatsbyImage
-              className="rounded-full"
-              image={profileImgData} 
-              alt={''} 
-            />
+            <a href={`/creator/${Slug}`} className="w-max outline-4 hover:outline duration-300 rounded-full overflow-hidden box-border">
+              <GatsbyImage
+                image={creatorImg} 
+                alt={`${FirstName} ${LastName}`} 
+              />
+            </a>
             <div>
-            <h2 className="mt-0 mb-4">Crafted by {name}. Built for Storytelling</h2>
+              <h2 className="mt-0 mb-4">Crafted by {FirstName} {LastName}. Built for Storytelling</h2>
               <Button
                 text="Buy now"
                 color="dark"

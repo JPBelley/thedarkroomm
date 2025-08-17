@@ -31,14 +31,20 @@ exports.sourceNodes = async ({ actions, createNodeId, createContentDigest }) => 
 exports.createPages = async ({ graphql, actions }) => {
     const { createPage } = actions;
     const productTemplate = path.resolve("src/templates/product.js");
+    const creatorTemplate = path.resolve("src/templates/creator.js");
 
     const result = await graphql(`
     {
-      allStrapiProduct {
-        nodes {
-          Slug
+        allStrapiProduct {
+            nodes {
+                Slug
+            }
         }
-      }
+        allStrapiCreator {
+            nodes {
+                Slug
+            }
+        }
     }
   `);
 
@@ -47,6 +53,7 @@ exports.createPages = async ({ graphql, actions }) => {
     }
 
     const products = result.data.allStrapiProduct.nodes;
+    const creators = result.data.allStrapiCreator.nodes;
 
     products.forEach(product => {
         createPage({
@@ -54,6 +61,16 @@ exports.createPages = async ({ graphql, actions }) => {
             component: productTemplate,
             context: {
                 slug: product.Slug
+            },
+        });
+    });
+
+    creators.forEach(creator => {
+        createPage({
+            path: `/creator/${creator.Slug}`,
+            component: creatorTemplate,
+            context: {
+                slug: creator.Slug
             },
         });
     });

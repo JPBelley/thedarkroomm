@@ -29,12 +29,14 @@ const Hero: React.FC<HeroProps> = ({ title, description, image, creator }) => {
       </h1>
 
       {!!creator && <div className="mb-8 lg:mb-16 flex items-center gap-4">
-        <GatsbyImage
-          className="rounded-full"
-          image={creatorImg}
-          alt={`${creator.informations.FirstName} ${creator.informations.LastName}`}
-        />
-        <h4 className="m-0">created by {creator.informations.FirstName} {creator.informations.LastName}</h4>
+        <a href={`/creator/${creator.Slug}`} className="w-max outline-4 hover:outline duration-300 rounded-full overflow-hidden box-border">
+          <GatsbyImage
+            className="rounded-full"
+            image={creatorImg}
+            alt={`${creator.FirstName} ${creator.LastName}`}
+          />
+        </a>
+        <h4 className="m-0">created by {creator.FirstName} {creator.LastName}</h4>
       </div>}
       
       {!!description && <p className="max-w-4xl text-center mx-auto mb-12 text-xl">{description}</p>}
@@ -43,8 +45,6 @@ const Hero: React.FC<HeroProps> = ({ title, description, image, creator }) => {
         image={image} 
         alt={title}
       />}
-
-      {/* <img className="object-cover rounded-2xl w-full max-h-[700px]" height={2000} width={3000} src={ConconDune} alt="Concon Dunes" loading="eager"/> */}
     </div>
   );
 }
