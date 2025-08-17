@@ -53,8 +53,12 @@ const FeaturedCreator: React.FC = ({ }) => {
       <section className = "container-black px-5 pt-12 lg:pt-28">
         <h2 className="text-center mt-0 mb-12">Featured creator</h2>
         <Columns columns="2" gap="16">
-          <div className="text-left flex flex-col justify-center gap-4">
-            <a href={`/creator/${Slug}`} className="w-max outline-4 hover:outline duration-300 rounded-full overflow-hidden box-border">
+          <div className="lg:text-left flex flex-col justify-center gap-4">
+            <a 
+              href={`/creator/${Slug}`} 
+              className="mx-auto lg:mx-0 w-max outline-4 hover:outline duration-300 rounded-full overflow-hidden box-border"
+              onClick={() => sa_event("click_creator_profile")}
+            >
               <GatsbyImage
                 image={creatorImg} 
                 alt={`${FirstName} ${LastName}`} 
