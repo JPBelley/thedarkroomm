@@ -31,7 +31,7 @@ const Hero: React.FC<HeroProps> = ({ title, description, image, creator }) => {
       {!!creator && <div className="mb-8 lg:mb-16 flex items-center gap-4">
         <a href={`/creator/${creator.Slug}`} className="w-max outline-4 hover:outline duration-300 rounded-full overflow-hidden box-border">
           <GatsbyImage
-            className="rounded-full"
+            className="hover:scale-110 duration-300 rounded-full"
             image={creatorImg}
             alt={`${creator.FirstName} ${creator.LastName}`}
           />

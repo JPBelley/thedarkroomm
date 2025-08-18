@@ -26,23 +26,23 @@ const CreatorPostTemplate = ({ data }) => {
             image={creatorImg}
             alt={`${strapiCreator.FirstName} ${strapiCreator.LastName}`}
           />
-          <div className="flex gap-4">
-            <a
+          {strapiCreator.Socials && <div className="flex gap-4">
+            {strapiCreator.Socials?.Instagram && <a
               className="rounded-full mb-8 lg:mb-16 border-2 flex p-1.5 hover:opacity-60 duration-300"
               href={strapiCreator.Socials.Instagram} 
               target="_blank"
             >
               <Instagram />
-            </a>
-            <a
+            </a>}
+            {strapiCreator.Socials?.Unsplash && <a
               className="rounded-full mb-8 lg:mb-16 border-2 flex p-1.5 hover:opacity-60 duration-300"
               href={strapiCreator.Socials.Unsplash} 
               target="_blank"
             >
               <Unsplash />
-            </a>
+            </a>}
 
-          </div>
+          </div>}
         </div>
 
         <div className="container-white px-5 pt-12 lg:pt-24 rounded-2xl">

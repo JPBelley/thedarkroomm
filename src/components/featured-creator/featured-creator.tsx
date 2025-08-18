@@ -60,6 +60,7 @@ const FeaturedCreator: React.FC = ({ }) => {
               onClick={() => sa_event("click_creator_profile")}
             >
               <GatsbyImage
+                className="hover:scale-110 duration-300"
                 image={creatorImg} 
                 alt={`${FirstName} ${LastName}`} 
               />
@@ -67,7 +68,7 @@ const FeaturedCreator: React.FC = ({ }) => {
             <div>
               <h2 className="mt-0 mb-4">Crafted by {FirstName} {LastName}. Built for Storytelling</h2>
               <Button
-                text="Buy now"
+                text="See presets"
                 color="dark"
                 link={productLink}
                 onClick={() => sa_event("click_creator_product")}
