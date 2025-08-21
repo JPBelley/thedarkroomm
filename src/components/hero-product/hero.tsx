@@ -29,7 +29,11 @@ const Hero: React.FC<HeroProps> = ({ title, description, image, creator }) => {
       </h1>
 
       {!!creator && <div className="mb-8 lg:mb-16 flex items-center gap-4">
-        <a href={`/creator/${creator.Slug}`} className="w-max outline-4 hover:outline duration-300 rounded-full overflow-hidden box-border">
+        <a 
+          href={`/creator/${creator.Slug}`} 
+          className="w-max outline-4 hover:outline duration-300 rounded-full overflow-hidden box-border"
+          onClick={() => sa_event("click_creator_profile")}
+        >
           <GatsbyImage
             className="hover:scale-110 duration-300 rounded-full"
             image={creatorImg}
