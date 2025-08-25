@@ -1,6 +1,34 @@
 import React from "react";
 
 const Newsletter: React.FC = () => {
+    React.useEffect(() => {
+        console.log('okok');
+        
+        function gtag_report_conversion(url) {
+            // var callback = function () {
+            //     if (typeof (url) != 'undefined') {
+            //         window.location = url;
+            //     }
+            // };
+            if (typeof gtag !== 'undefined') { 
+                console.log('Form filled');
+                
+                gtag('event', 'conversion', {
+                    'send_to': 'AW-17489591823/q0ZICN7k6IsbEI_815NB',
+                    // 'event_callback': callback
+                });
+            };
+            return false;
+        }
+
+        // Attach global listener (capture phase)
+        document.addEventListener("submit", gtag_report_conversion, true);
+
+        // Cleanup on unmount
+        return () => {
+            document.removeEventListener("submit", gtag_report_conversion, true);
+        };
+    }, []);
     
     return (
         <>
