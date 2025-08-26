@@ -2,7 +2,6 @@ import React from "react";
 
 const Newsletter: React.FC = () => {
     React.useEffect(() => {
-        console.log('okok');
         
         function gtag_report_conversion(url) {
             // var callback = function () {

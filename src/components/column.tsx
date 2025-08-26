@@ -9,6 +9,7 @@ interface ColumnProps {
   image: Image;
   href: string;
   itemId: number;
+  category?: string;
 }
 
 /*
@@ -16,18 +17,24 @@ interface ColumnProps {
  */
 
 const Column: React.FC<ColumnProps> = (props) => {
-  const { image, href, itemId } = props
+  const { image, href, itemId, category } = props
   let featuredImg = getImage(image?.localFile.childImageSharp.gatsbyImageData)
-  
+
   return (
     <a
       href={href} 
-      className={`column relative flex-1 w-full min-w-[30%] rounded overflow-hidden`}
+      className={`column relative flex-1 w-full min-w-[30%] rounded overflow-hidden flex justify-center items-center`}
       onClick={() =>{
         sa_event(`click_product`);
         sa_event(`click_product ${itemId}}`);
       }}
     >
+      {/* {category && <h3 
+        className="absolute z-10 text-white m-0 uppercase"
+        >
+          {category}
+        </h3>
+      } */}
       <GatsbyImage image={featuredImg} alt={''} />
     </a>
   );

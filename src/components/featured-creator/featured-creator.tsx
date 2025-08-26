@@ -71,7 +71,10 @@ const FeaturedCreator: React.FC = ({ }) => {
                 text="See presets"
                 color="dark"
                 link={productLink}
-                onClick={() => sa_event("click_creator_product")}
+                onClick={() => {
+                  sa_event(`click_product`);
+                  sa_event("click_creator_product")}
+                }
               />
             </div>
           </div>
@@ -79,6 +82,7 @@ const FeaturedCreator: React.FC = ({ }) => {
             <a
               href={productLink}
               onClick={() => {
+                sa_event(`click_product`);
                 sa_event("click_creator_product");
               }}
             >

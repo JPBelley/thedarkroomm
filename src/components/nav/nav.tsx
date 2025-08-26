@@ -46,6 +46,12 @@ const Nav: React.FC = () => {
                     >
                         Subscribe
                     </a>
+                    <a
+                        className="hidden md:flex items-center h-14 px-6 uppercase hover:bg-black transition-colors duration-200 rounded-md " href="/sell"
+                        onClick={() => sa_event("menu_sell")}
+                    >
+                        Sell
+                    </a>
                 </div>
             </nav>
         </div>

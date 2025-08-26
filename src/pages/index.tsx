@@ -45,11 +45,11 @@ const IndexPage: React.FC<PageProps> = ({ data }) => {
           <Columns columns="3">
             {nodes.map((column: any, i: number) => {
               // const { published, slug, featuredImage } = column.node?.frontmatter;
-              const { featuredImage, Slug } = column;
+              const { featuredImage, Slug, category } = column;
               
               return (
                 // <Column key={i} image={featuredImage} href={`/product/${slug}`} itemId={slug}/>
-                <Column key={i} image={featuredImage} href={`/product/${Slug}`} itemId={''}/>
+                <Column key={i} image={featuredImage} href={`/product/${Slug}`} itemId={''} category={category.name} />
               )
             })}
           </Columns>
@@ -74,6 +74,9 @@ export const pageQuery = graphql`
       nodes {
         Slug
         productLink
+        category {
+          name
+        }
         featuredImage {
           localFile {
             childImageSharp {
