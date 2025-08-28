@@ -5,7 +5,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout/layout";
 import Hero from "../components/hero-product/hero";
 import Columns from "../components/columns";
-import Column from "../components/column";
+import Card from "../components/card";
 import MonthlyCTA from "../components/monthly-cta/monthly-cta";
 
 import Newsletter from "../components/newsletter/Newsletter";
@@ -26,7 +26,7 @@ const IndexPage: React.FC<PageProps> = ({ data }) => {
               const { featuredImage, Slug } = column;
 
               return (
-                <Column key={i} image={featuredImage} href={`/product/${Slug}`} itemId={Slug} />
+                <Card key={i} image={featuredImage} href={`/product/${Slug}`} itemId={Slug} />
               )
             })}
           </Columns>

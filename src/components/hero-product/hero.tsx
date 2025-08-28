@@ -46,7 +46,8 @@ const Hero: React.FC<HeroProps> = ({ title, description, image, creator }) => {
       {!!description && <p className="max-w-4xl text-center mx-auto mb-12 text-xl">{description}</p>}
       {!!image && <GatsbyImage 
         className="rounded-t-2xl w-full max-h-[700px]"
-        image={image} 
+        loading="eager"
+        image={image}
         alt={title}
       />}
     </div>

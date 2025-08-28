@@ -5,7 +5,7 @@ import type { Image } from "../project-types";
 /*
  * Types
  */
-interface ColumnProps {
+interface CardProps {
   image: Image;
   href: string;
   itemId: number;
@@ -16,14 +16,14 @@ interface ColumnProps {
  * Style
  */
 
-const Column: React.FC<ColumnProps> = (props) => {
+const Card: React.FC<CardProps> = (props) => {
   const { image, href, itemId, category } = props
   let featuredImg = getImage(image?.localFile.childImageSharp.gatsbyImageData)
 
   return (
     <a
       href={href} 
-      className={`column relative flex-1 w-full min-w-[30%] rounded overflow-hidden flex justify-center items-center`}
+      className={`card relative flex-1 w-full min-w-[30%] rounded overflow-hidden flex justify-center items-center`}
       onClick={() =>{
         sa_event(`click_product`);
         sa_event(`click_product ${itemId}}`);
@@ -40,4 +40,4 @@ const Column: React.FC<ColumnProps> = (props) => {
   );
 }
 
-export default Column
+export default Card

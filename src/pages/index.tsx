@@ -7,7 +7,7 @@ import { getImage } from "gatsby-plugin-image"
 import Layout from "../components/layout/layout";
 import Hero from "../components/hero/hero";
 import Columns from "../components/columns";
-import Column from "../components/column";
+import Card from "../components/card";
 import MonthlyCTA from "../components/monthly-cta/monthly-cta";
 
 // Import Swiper styles
@@ -44,12 +44,10 @@ const IndexPage: React.FC<PageProps> = ({ data }) => {
           <p className="max-w-4xl text-center mx-auto mb-12 text-xl">Whether you're a beginner or a pro, our presets are designed to enhance your photos with beautiful tones and a unique style—helping you achieve the look you love with just few clicks.</p>
           <Columns columns="3">
             {nodes.map((column: any, i: number) => {
-              // const { published, slug, featuredImage } = column.node?.frontmatter;
               const { featuredImage, Slug, category } = column;
               
               return (
-                // <Column key={i} image={featuredImage} href={`/product/${slug}`} itemId={slug}/>
-                <Column key={i} image={featuredImage} href={`/product/${Slug}`} itemId={''} category={category.name} />
+                <Card key={i} image={featuredImage} href={`/product/${Slug}`} itemId={''} category={category.name} />
               )
             })}
           </Columns>

@@ -6,7 +6,7 @@ import Layout from "../components/layout/layout";
 import MonthlyCTA from "../components/monthly-cta/monthly-cta";
 import Newsletter from "../components/newsletter/Newsletter";
 import Columns from "../components/columns";
-import Column from "../components/column";
+import Card from "../components/card";
 import Instagram from '../components/svg/Instagram'
 import Unsplash from '../components/svg/Unsplash'
 
@@ -52,7 +52,7 @@ const CreatorPostTemplate = ({ data }) => {
                 const { featuredImage, Slug } = column;
 
                 return (
-                  <Column key={i} image={featuredImage} href={`/product/${Slug}`} itemId={Slug} />
+                  <Card key={i} image={featuredImage} href={`/product/${Slug}`} itemId={Slug} />
                 )
               })}
             </Columns>
