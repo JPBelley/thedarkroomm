@@ -1,0 +1,232 @@
+.osano-cm-dialog {
+    background: #fff;
+    color: #000
+}
+
+.osano-cm-content__message {
+    margin-bottom: 0
+}
+
+.osano-cm-dialog--type_box.osano-cm-dialog--position_center {
+    border-radius: 8px;
+    max-width: 445px;
+    overflow: visible;
+    width: calc(100vw - 4em)
+}
+
+.osano-cm-dialog--type_box {
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .2)
+}
+
+.osano-cm-storage-policy {
+    margin-bottom: 10px;
+    margin-top: 4px;
+    outline: none;
+    text-decoration: none
+}
+
+.osano-cm-storage-policy:focus,
+[tabindex].osano-cm-storage-policy:focus-visible {
+    border-color: inherit;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    outline: none
+}
+
+.osano-cm-toggle__switch::after {
+    background-color: var(--black);
+}
+
+.osano-cm-storage-policy:hover {
+    text-decoration: underline
+}
+
+.osano-cm-drawer-item.osano-cm-list__list-item {
+    background-image: none;
+    padding-left: 0
+}
+
+.osano-cm-drawer-links__link {
+    margin-bottom: 6px;
+}
+
+.osano-cm-info {
+    border-radius: 1rem;
+    bottom: auto;
+    box-shadow: none;
+    left: 50%;
+    max-height: 80vh;
+    max-width: 60rem;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    color: var(--black);
+}
+
+.osano-cm-info-dialog-header {
+    padding: 2rem 2rem 0;
+    background-color: white;
+}
+
+.osano-cm-info-dialog-header__header {
+    font-size: 1.5rem;
+    padding: 0 0 1rem
+}
+
+.osano-cm-info-views {
+    padding: 0 2rem;
+    background: white;
+}
+
+.osano-cm-view {
+    padding: 0;
+    background: white;
+}
+
+.osano-cm-info-dialog-header__close {
+    background: white;
+    color: var(--black);
+    stroke: var(--black)
+}
+
+.osano-cm-info-dialog-header__close {
+    align-items: center;
+    background: #f9f8f6;
+    color: #171417;
+    display: flex;
+    margin: 0;
+    padding: 4px
+}
+
+.osano-cm-view__description {
+    padding-right: 3rem
+}
+
+.osano-cm-info-dialog-header__close svg {
+    height: 14px;
+    width: 14px
+}
+
+.osano-cm-description {
+    font-size: .875rem;
+    margin-top: 0;
+    padding-right: 3rem
+}
+
+a.osano-cm-storage-policy {
+    text-decoration: underline
+}
+
+a.osano-cm-storage-policy:hover {
+    text-decoration: none
+}
+
+.osano-cm-toggle__label.osano-cm-label {
+    color: #171417;
+    font-size: 1rem;
+    font-weight: 700
+}
+
+.osano-cm-disclosure {
+    font-size: .875rem;
+    padding-top: 8px
+}
+
+.osano-cm-dialog__buttons {
+    gap: 4px
+}
+
+.osano-cm-buttons__button,
+.osano-cm-save.osano-cm-view__button.osano-cm-button {
+    grid-column-gap: .625rem;
+    grid-row-gap: .625rem;
+    align-items: center;
+    background-color: transparent;
+    border: 2px solid #000;
+    border-radius: 8px;
+    color: var(--black);
+    display: flex;
+    font-family: Abcfavoritvariable, Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    justify-content: center;
+    padding: .75rem 2rem;
+    text-align: center;
+    text-decoration: none;
+    transition: all .25s cubic-bezier(.25, .46, .45, .94)
+}
+
+.osano-cm-buttons__button:hover,
+.osano-cm-save.osano-cm-view__button.osano-cm-button:hover {
+    background-color: white
+}
+
+.osano-cm-accept,
+.osano-cm-accept-all {
+    background-color: var(--black);
+    color: white;
+    order: -1;
+    width: 100%
+}
+
+.osano-cm-accept-all:hover {
+    background-color: var(--black);
+    border-color: var(--black);
+    color: white
+}
+
+.osano-cm-toggle__input:checked+.osano-cm-toggle__switch {
+    background-color: white;
+}
+
+.osano-cm-toggle__input:checked+.osano-cm-toggle__switch:before {
+    // background-color: var(--black);
+    border: 1px solid #b3b3b1
+}
+
+.osano-cm-toggle__switch:before {
+    border: 1px solid #b3b3b1;
+    inset: -4px
+}
+
+.osano-cm-toggle__switch {
+    background-color: transparent
+}
+
+.osano-cm-dialog__close {
+    align-items: center;
+    background-color: white;
+    display: flex;
+    margin: 0;
+    right: -24px;
+    top: -24px
+}
+
+.osano-cm-dialog__close svg {
+    height: 14px;
+    width: 14px
+}
+
+.osano-cm-dialog__close {
+    color: white
+}
+
+.osano-cm-dialog__close,
+.osano-cm-dialog__close:hover,
+.osano-cm-info-dialog-header__close:focus:hover {
+    stroke: var(--black)
+}
+
+.osano-cm-link,
+.osano-cm-link:hover {
+    color: var(--black)
+}
+
+.osano-cm-widget:focus,
+.osano-cm-widget:hover {
+    background: transparent;
+}
+.osano-cm-widget__outline {
+    fill: white;
+    stroke: var(--black);
+}

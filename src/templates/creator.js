@@ -6,7 +6,7 @@ import Layout from "../components/layout/layout";
 import MonthlyCTA from "../components/monthly-cta/monthly-cta";
 import Newsletter from "../components/newsletter/Newsletter";
 import Columns from "../components/columns";
-import Card from "../components/card";
+import Card from "../components/card/card";
 import Instagram from '../components/svg/Instagram'
 import Unsplash from '../components/svg/Unsplash'
 
@@ -31,6 +31,7 @@ const CreatorPostTemplate = ({ data }) => {
               className="rounded-full mb-8 lg:mb-16 border-2 flex p-1.5 hover:opacity-60 duration-300"
               href={strapiCreator.Socials.Instagram} 
               target="_blank"
+              rel="noreferrer"
             >
               <Instagram />
             </a>}
@@ -38,6 +39,7 @@ const CreatorPostTemplate = ({ data }) => {
               className="rounded-full mb-8 lg:mb-16 border-2 flex p-1.5 hover:opacity-60 duration-300"
               href={strapiCreator.Socials.Unsplash} 
               target="_blank"
+              rel="noreferrer"
             >
               <Unsplash />
             </a>}

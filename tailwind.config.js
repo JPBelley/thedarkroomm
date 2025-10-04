@@ -17,6 +17,8 @@ module.exports = {
     extend: {
       colors: {
         'soft-black': 'var(--soft-black)',
+        'black': 'var(--black)',
+        'white': 'var(--white)',
       },
     },
   },

@@ -14,7 +14,7 @@ const ProductPostTemplate = ({ data }) => {
   const { strapiProduct } = data // data.markdownRemark holds your post data
 
   let heroImg = getImage(strapiProduct.heroImage.localFile.childrenImageSharp[0].gatsbyImageData);
-  
+    
   return (
     <Layout>
       <div>
@@ -54,7 +54,7 @@ const ProductPostTemplate = ({ data }) => {
           <section
             className="container-content px-5 py-12 lg:py-16 mx-auto text-center max-w-4xl"
           >
-            <RichTextRenderer content={strapiProduct.richText} />
+            {strapiProduct.richText && <RichTextRenderer content={strapiProduct.richText} />}
             <Button
               text="Buy now"
               color="dark"

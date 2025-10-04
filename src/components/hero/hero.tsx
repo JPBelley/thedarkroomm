@@ -2,6 +2,7 @@ import React from "react"
 import { GatsbyImage } from "gatsby-plugin-image"
 
 import SpanText from "../../utils/span-text";
+import BeforeAfterComparison from "../../components/before-n-after/before-n-after"
 
 /*
  * Types
@@ -9,13 +10,14 @@ import SpanText from "../../utils/span-text";
 interface HeroProps {
   title: string;
   image: any
+  afterImage?: any
 }
 
 /*
  * Style
  */
 
-const Hero: React.FC<HeroProps> = ({title, image}) => {
+const Hero: React.FC<HeroProps> = ({ title, image, afterImage }) => {
   
   return (
     <div className={`hero container relative flex items-center justify-center flex-col text-center`}>
@@ -26,13 +28,13 @@ const Hero: React.FC<HeroProps> = ({title, image}) => {
         />
       </h1>
 
-      <GatsbyImage
+      <BeforeAfterComparison image={image} afterImage={afterImage} />
+      {/* <GatsbyImage
         className="object-cover rounded-2xl w-full max-h-[700px]"
         loading="eager" 
         image={image}
         alt={'Hero image'}
-      />
-      {/* <img className="object-cover rounded-t-2xl w-full max-h-[700px]" height={2000} width={3000} src={ConconDune} alt="Lanscape preset" loading="eager"/> */}
+      /> */}
     </div>
   );
 }

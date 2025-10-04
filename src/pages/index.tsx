@@ -7,7 +7,7 @@ import { getImage } from "gatsby-plugin-image"
 import Layout from "../components/layout/layout";
 import Hero from "../components/hero/hero";
 import Columns from "../components/columns";
-import Card from "../components/card";
+import Card from "../components/card/card";
 import MonthlyCTA from "../components/monthly-cta/monthly-cta";
 
 // Import Swiper styles
@@ -17,7 +17,8 @@ import FeaturedCreator from "../components/featured-creator/featured-creator";
 
 const IndexPage: React.FC<PageProps> = ({ data }) => {
   const { allStrapiHomepage, allStrapiProduct: {nodes} } = data;
-  const heroImgData = getImage(allStrapiHomepage.nodes[0].heroImage.localFile.childrenImageSharp[0].gatsbyImageData);
+  const heroImgData = getImage(allStrapiHomepage.nodes[0].heroImageOriginal.localFile.childrenImageSharp[0].gatsbyImageData);
+  const heroImgAfterData = getImage(allStrapiHomepage.nodes[0].heroImageModified.localFile.childrenImageSharp[0].gatsbyImageData);
   // const [ref, isVisible] = useInView();
   
   return (
@@ -27,6 +28,7 @@ const IndexPage: React.FC<PageProps> = ({ data }) => {
         <Hero
           title={allStrapiHomepage.nodes[0].Title}
           image={heroImgData}
+          afterImage={heroImgAfterData}
         />
 
         <FeaturedCreator />
@@ -44,10 +46,18 @@ const IndexPage: React.FC<PageProps> = ({ data }) => {
           <p className="max-w-4xl text-center mx-auto mb-12 text-xl">Whether you're a beginner or a pro, our presets are designed to enhance your photos with beautiful tones and a unique style—helping you achieve the look you love with just few clicks.</p>
           <Columns columns="3">
             {nodes.map((column: any, i: number) => {
-              const { featuredImage, Slug, category } = column;
+              const { featuredImage, Slug, category, Title } = column;              
               
               return (
-                <Card key={i} image={featuredImage} href={`/product/${Slug}`} itemId={''} category={category.name} />
+                <Card 
+                  key={i}
+                  card={column}
+                  image={featuredImage}
+                  href={`/product/${Slug}`} 
+                  itemId={''} 
+                  category={category.name} 
+                  title={Title}
+                />
               )
             })}
           </Columns>
@@ -71,6 +81,7 @@ export const pageQuery = graphql`
       ) {
       nodes {
         Slug
+        Title
         productLink
         category {
           name
@@ -87,7 +98,14 @@ export const pageQuery = graphql`
     allStrapiHomepage {
       nodes {
         Title
-        heroImage {
+        heroImageOriginal {
+          localFile {
+            childrenImageSharp {
+              gatsbyImageData(width: 2400)
+            }
+          }
+        }
+        heroImageModified {
           localFile {
             childrenImageSharp {
               gatsbyImageData(width: 2400)

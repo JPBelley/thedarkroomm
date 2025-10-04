@@ -4,6 +4,7 @@
 @use './base/root.scss';
 @use './base/reset.scss';
 @use './base/container.scss';
+@use './base/banner.scss';
 
 // Design system
 @use '../design-system/headings/heading.scss';
@@ -11,6 +12,9 @@
 
 // Logo
 @use '../components/svg/logo.scss';
+
+// Compenents
+@use '../components/card/card.scss';
 
 // Newsletter
 @use '../components/newsletter/newsletter.scss';

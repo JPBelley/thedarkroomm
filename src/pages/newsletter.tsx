@@ -4,7 +4,6 @@ import type { PageProps } from "gatsby"
 import Layout from "../components/layout/layout";
 import Hero from "../components/hero-product/hero";
 import Button from "../design-system/button/button";
-import MonthlyCTA from "../components/monthly-cta/monthly-cta";
 import Newsletter from "../components/newsletter/Newsletter";
 
 
@@ -37,8 +36,6 @@ const NewsletterPage: React.FC<PageProps> = ({ data }) => {
             />
           </div>
         </div>
-
-        <MonthlyCTA />
         
       </Layout>
     </>

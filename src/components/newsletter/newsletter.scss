@@ -1,5 +1,16 @@
 main #mlb2-29711527.ml-form-embedContainer .ml-form-embedWrapper.embedForm,
 main #mlb2-21179249.ml-form-embedContainer .ml-form-embedWrapper.embedForm {
-    max-width: 600px;
+    max-width: 500px;
     background-color: var(--white);
+}
+#mlb2-21179249.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody form {
+    max-width: 100%;
+}
+#mlb2-21179249.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody.row-form {
+    padding-left: 0;
+    padding-right: 0;
+}
+input[type="email"] {
+    width: 100%;
+    max-width: 100%;
 }

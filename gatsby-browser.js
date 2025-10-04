@@ -5,6 +5,11 @@ import LogRocket from 'logrocket';
 export const onClientEntry = () => {
     
     if (process.env.NODE_ENV === 'production') {
-        LogRocket.init('cdyunb/thedarkroommcom');
+        LogRocket.init('cdyunb/thedarkroommcom', {
+            dom: {
+                // textSanitizer: true,   // Redacts text nodes
+                inputSanitizer: true,  // Redacts input values
+            }
+        });
     }
 };

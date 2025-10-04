@@ -24,14 +24,14 @@ const IndexPage: React.FC<PageProps> = ({ data }) => {
             <Button
               text="Desktop"
               color="dark"
-              link="/free-preset/ny-desktop.xmp"
+              link="/free-preset/cinematic_pink_desktop.xmp"
               onClick={() => sa_event("download_free_preset_desktop")}
               download={true}
             />
             <Button
               text="Mobile"
               color="dark"
-              link="/free-preset/ny-mobile.dng"
+              link="/free-preset/cinematic_pink_mobile.dng"
               onClick={() => sa_event("download_free_preset_mobile")}
               download={true}
             />
