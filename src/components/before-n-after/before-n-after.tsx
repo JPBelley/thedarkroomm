@@ -154,6 +154,7 @@ export default function BeforeAfterComparison({
                             const percentage = Math.max(0, Math.min(100, (x / rect.width) * 100))
                             setSliderPosition(percentage)
                             sa_event(`click_dragging`);
+                            
                             setIsDragging(true)
                             e.preventDefault()
                         }}
