@@ -40,7 +40,9 @@ const Hero: React.FC<HeroProps> = ({ title, description, image, creator }) => {
             alt={`${creator.FirstName} ${creator.LastName}`}
           />
         </a>
-        <h4 className="m-0">created by {creator.FirstName} {creator.LastName}</h4>
+        <h4 className="m-0 text-left flex flex-col gap-1">created by
+          <span className="block">{creator.FirstName} {creator.LastName}</span>
+        </h4>
       </div>}
       
       {!!description && <p className="max-w-4xl text-center mx-auto mb-12 text-xl">{description}</p>}
