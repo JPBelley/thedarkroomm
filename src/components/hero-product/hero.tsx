@@ -1,6 +1,7 @@
 import * as React from "react"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import SpanText from "../../utils/span-text";
+import BeforeAfterComparison from "../../components/before-n-after/before-n-after"
 
 /*
  * Types
@@ -47,12 +48,17 @@ const Hero: React.FC<HeroProps> = ({ title, description, image, creator }) => {
       </div>}
       
       {!!description && <p className="max-w-4xl text-center mx-auto mb-12 text-xl">{description}</p>}
-      {!!image && <GatsbyImage 
+      
+      <BeforeAfterComparison 
+        beforeImage={image}
+        // afterImage={image} 
+      />
+      {/* {!!image && <GatsbyImage 
         className="rounded-t-2xl w-full max-h-[700px]"
         loading="eager"
         image={image}
         alt={title}
-      />}
+      />} */}
     </div>
   );
 }

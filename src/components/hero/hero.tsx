@@ -1,5 +1,4 @@
 import React from "react"
-import { GatsbyImage } from "gatsby-plugin-image"
 
 import SpanText from "../../utils/span-text";
 import BeforeAfterComparison from "../../components/before-n-after/before-n-after"
@@ -28,7 +27,7 @@ const Hero: React.FC<HeroProps> = ({ title, image, afterImage }) => {
         />
       </h1>
 
-      <BeforeAfterComparison image={image} afterImage={afterImage} />
+      <BeforeAfterComparison beforeImage={image} afterImage={afterImage} />
       {/* <GatsbyImage
         className="object-cover rounded-2xl w-full max-h-[700px]"
         loading="eager" 

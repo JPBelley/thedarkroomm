@@ -4,8 +4,8 @@ import React, { useState, useRef, useCallback, useEffect, MouseEvent, TouchEvent
 import { GatsbyImage } from "gatsby-plugin-image"
 
 interface BeforeAfterComparisonProps {
-    beforeImage: string
-    afterImage: any
+    beforeImage: any
+    afterImage?: any
     beforeLabel?: string
     afterLabel?: string
     className?: string
@@ -17,7 +17,6 @@ export default function BeforeAfterComparison({
     beforeLabel = "Before",
     afterLabel = "After",
     className = "",
-    image,
 }: BeforeAfterComparisonProps) {
     const [sliderPosition, setSliderPosition] = useState(50)
     const [isDragging, setIsDragging] = useState(false)
@@ -91,43 +90,37 @@ export default function BeforeAfterComparison({
                     className="relative w-full overflow-hidden cursor-col-resize select-none"
                     style={{ touchAction: "none" }}
                 >
-                    {/* After Image */}
+                    {/* Before Image */}
                     <div className="inset-0">
                         <GatsbyImage
                             className="object-cover rounded-2xl w-full"
                             loading="eager"
-                            image={afterImage}
-                            alt={'Hero image'}
+                            image={beforeImage}
+                            alt={'Hero image before'}
                         />
-                        <div className="absolute top-4 left-4 bg-black text-white px-3 py-1 rounded-full text-sm font-medium">
-                            {afterLabel}
-                        </div>
+                        {afterImage && <div className="absolute top-4 right-4 bg-black text-white px-3 py-1 rounded-full text-sm font-medium">
+                            {beforeLabel}
+                        </div>}
                     </div>
 
                     {/* After Image */}
-                    <div
+                    {afterImage && <div
                         className="absolute inset-0 overflow-hidden"
                         style={{ clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}
                     >
                         <GatsbyImage
                             className="object-cover rounded-2xl w-full"
-                            loading="eager" 
-                            image={image}
-                            alt={'Hero image'}
+                            loading="eager"
+                            image={afterImage}
+                            alt={'Hero image after'}
                         />
-                        <img
-                            src={afterImage || "/placeholder.svg"}
-                            alt={beforeLabel}
-                            className="w-full h-full object-cover"
-                            draggable={false}
-                        />
-                        <div className="absolute top-4 right-4 bg-black text-white px-3 py-1 rounded-full text-sm font-medium">
-                            {beforeLabel}
+                        <div className="absolute top-4 left-4 bg-black text-white px-3 py-1 rounded-full text-sm font-medium">
+                            {afterLabel}
                         </div>
-                    </div>
+                    </div>}
 
                     {/* Slider Line and Handle */}
-                    <div
+                    {afterImage && <div
                         className="absolute top-0 bottom-0 w-1 bg-black shadow-lg z-10 pointer-events-none"
                         style={{ left: `${sliderPosition}%` }}
                     >
@@ -142,10 +135,10 @@ export default function BeforeAfterComparison({
                                 <div className="w-0.5 h-4 bg-black rounded-full"></div>
                             </div>
                         </div>
-                    </div>
+                    </div>}
 
                     {/* Invisible drag area for better UX */}
-                    <div
+                    {afterImage && <div
                         className="absolute inset-0 cursor-col-resize"
                         onMouseDown={(e) => {
                             if (!containerRef.current) return
@@ -168,7 +161,7 @@ export default function BeforeAfterComparison({
                             setIsDragging(true)
                             e.preventDefault()
                         }}
-                    />
+                    />}
                 </div>
             </div>
         </div>
