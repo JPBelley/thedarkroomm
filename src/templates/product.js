@@ -14,6 +14,7 @@ const ProductPostTemplate = ({ data }) => {
   const { strapiProduct } = data // data.markdownRemark holds your post data
 
   let heroImg = getImage(strapiProduct.heroImage.localFile.childrenImageSharp[0].gatsbyImageData);
+  let heroImgAfter = strapiProduct.heroImageAfter ? getImage(strapiProduct.heroImageAfter.localFile.childrenImageSharp[0].gatsbyImageData) : null;
     
   return (
     <Layout>
@@ -21,6 +22,7 @@ const ProductPostTemplate = ({ data }) => {
         <Hero
           title={strapiProduct.Title}
           image={heroImg}
+          afterImage={heroImgAfter}
           creator={strapiProduct.creator}
         />
 
@@ -113,6 +115,13 @@ export const pageQuery = graphql`
         Slug
       }
       heroImage {
+        localFile {
+          childrenImageSharp {
+            gatsbyImageData(width: 1640)
+          }
+        }
+      }
+      heroImageAfter {
         localFile {
           childrenImageSharp {
             gatsbyImageData(width: 1640)

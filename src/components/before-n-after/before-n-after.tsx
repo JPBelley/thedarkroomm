@@ -21,6 +21,8 @@ export default function BeforeAfterComparison({
     const [sliderPosition, setSliderPosition] = useState(50)
     const [isDragging, setIsDragging] = useState(false)
     const containerRef = useRef<HTMLDivElement>(null)
+    console.log(afterImage);
+    
 
     const handleMouseDown = useCallback((e: MouseEvent) => {
         sa_event(`click_dragging`);

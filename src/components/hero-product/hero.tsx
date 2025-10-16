@@ -10,6 +10,7 @@ interface HeroProps {
   title: string;
   description?: string;
   image?: any;
+  afterImage?: any;
   creator?: any;
 }
 
@@ -17,7 +18,7 @@ interface HeroProps {
  * Style
  */
 
-const Hero: React.FC<HeroProps> = ({ title, description, image, creator }) => {
+const Hero: React.FC<HeroProps> = ({ title, description, image, afterImage, creator }) => {
   let creatorImg = creator ? getImage(creator.Avatar.localFile.childImageSharp.gatsbyImageData) : null;
 
   return (
@@ -51,7 +52,7 @@ const Hero: React.FC<HeroProps> = ({ title, description, image, creator }) => {
       
       <BeforeAfterComparison 
         beforeImage={image}
-        // afterImage={image} 
+        afterImage={afterImage} 
       />
       {/* {!!image && <GatsbyImage 
         className="rounded-t-2xl w-full max-h-[700px]"
