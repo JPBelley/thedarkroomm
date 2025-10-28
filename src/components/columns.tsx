@@ -7,11 +7,11 @@ interface ColumnsProps {
 }
 
 const Columns = ({ children, gap = "4", columns = "2" }: ColumnsProps) => {
-  const classesTemps = ['grid-cols-2', 'grid-cols-3', 'grid-cols-4', 'gap-16'];
+  const classesTemps = ['lg:grid-cols-2', 'lg:grid-cols-3', 'lg:grid-cols-4', 'gap-16'];
  
   return (
     <>
-      <div className={`flex md:grid grid-cols-${columns} w-full container gap-${gap} pb-12 lg:pb-28 flex-col text-center`}>
+      <div className={`flex sm:grid sm:grid-cols-2 lg:grid-cols-${columns} w-full container gap-${gap} pb-12 lg:pb-28 flex-col text-center`}>
         {children}
       </div>
     </>

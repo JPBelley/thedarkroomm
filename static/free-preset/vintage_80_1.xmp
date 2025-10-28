@@ -4,7 +4,7 @@
     xmlns:crs="http://ns.adobe.com/camera-raw-settings/1.0/"
    crs:PresetType="Normal"
    crs:Cluster=""
-   crs:UUID="AF956BC11A894DEC846EC25C6A318CFA"
+   crs:UUID="5AAA4FDE901F44B99B95CD11FA0FED77"
    crs:SupportsAmount2="True"
    crs:SupportsAmount="True"
    crs:SupportsColor="True"
@@ -14,71 +14,70 @@
    crs:SupportsSceneReferred="True"
    crs:SupportsOutputReferred="True"
    crs:RequiresRGBTables="False"
+   crs:ShowInPresets="True"
+   crs:ShowInQuickActions="False"
    crs:CameraModelRestriction=""
    crs:Copyright=""
    crs:ContactInfo=""
-   crs:Version="16.1"
+   crs:Version="17.5"
    crs:ProcessVersion="15.4"
    crs:WhiteBalance="Custom"
-   crs:IncrementalTemperature="+10"
-   crs:IncrementalTint="-8"
-   crs:Exposure2012="-0.64"
-   crs:Contrast2012="+9"
-   crs:Highlights2012="-36"
+   crs:IncrementalTemperature="+6"
+   crs:IncrementalTint="-10"
+   crs:Exposure2012="-0.20"
+   crs:Contrast2012="-10"
+   crs:Highlights2012="-40"
    crs:Shadows2012="+35"
-   crs:Whites2012="-36"
-   crs:Blacks2012="+23"
+   crs:Whites2012="-40"
+   crs:Blacks2012="+12"
    crs:Texture="0"
-   crs:Clarity2012="+5"
-   crs:Dehaze="-10"
-   crs:Vibrance="0"
-   crs:Saturation="+10"
+   crs:Clarity2012="-5"
+   crs:Dehaze="0"
+   crs:Vibrance="-12"
+   crs:Saturation="-5"
    crs:ParametricShadows="-10"
-   crs:ParametricDarks="+45"
-   crs:ParametricLights="+5"
-   crs:ParametricHighlights="-40"
+   crs:ParametricDarks="+10"
+   crs:ParametricLights="-10"
+   crs:ParametricHighlights="-10"
    crs:ParametricShadowSplit="25"
    crs:ParametricMidtoneSplit="50"
    crs:ParametricHighlightSplit="75"
-   crs:Sharpness="50"
-   crs:SharpenRadius="+1.0"
-   crs:SharpenDetail="25"
-   crs:SharpenEdgeMasking="0"
-   crs:LuminanceSmoothing="5"
+   crs:Sharpness="0"
+   crs:LuminanceSmoothing="10"
    crs:LuminanceNoiseReductionDetail="50"
-   crs:LuminanceNoiseReductionContrast="0"
-   crs:ColorNoiseReduction="25"
+   crs:LuminanceNoiseReductionContrast="3"
+   crs:ColorNoiseReduction="10"
    crs:ColorNoiseReductionDetail="50"
    crs:ColorNoiseReductionSmoothness="50"
-   crs:HueAdjustmentRed="+40"
-   crs:HueAdjustmentOrange="-10"
-   crs:HueAdjustmentYellow="0"
-   crs:HueAdjustmentGreen="0"
-   crs:HueAdjustmentAqua="-46"
-   crs:HueAdjustmentBlue="-46"
+   crs:HueAdjustmentRed="0"
+   crs:HueAdjustmentOrange="-5"
+   crs:HueAdjustmentYellow="-10"
+   crs:HueAdjustmentGreen="+10"
+   crs:HueAdjustmentAqua="0"
+   crs:HueAdjustmentBlue="-5"
    crs:HueAdjustmentPurple="0"
    crs:HueAdjustmentMagenta="0"
-   crs:SaturationAdjustmentRed="-20"
-   crs:SaturationAdjustmentOrange="-40"
-   crs:SaturationAdjustmentYellow="-20"
-   crs:SaturationAdjustmentGreen="-30"
-   crs:SaturationAdjustmentAqua="-21"
-   crs:SaturationAdjustmentBlue="-100"
-   crs:SaturationAdjustmentPurple="-35"
-   crs:SaturationAdjustmentMagenta="-35"
-   crs:LuminanceAdjustmentRed="-15"
-   crs:LuminanceAdjustmentOrange="-15"
-   crs:LuminanceAdjustmentYellow="-15"
-   crs:LuminanceAdjustmentGreen="0"
+   crs:SaturationAdjustmentRed="-10"
+   crs:SaturationAdjustmentOrange="+5"
+   crs:SaturationAdjustmentYellow="-10"
+   crs:SaturationAdjustmentGreen="-20"
+   crs:SaturationAdjustmentAqua="-55"
+   crs:SaturationAdjustmentBlue="-6"
+   crs:SaturationAdjustmentPurple="0"
+   crs:SaturationAdjustmentMagenta="0"
+   crs:LuminanceAdjustmentRed="-10"
+   crs:LuminanceAdjustmentOrange="-5"
+   crs:LuminanceAdjustmentYellow="-10"
+   crs:LuminanceAdjustmentGreen="-10"
    crs:LuminanceAdjustmentAqua="-10"
-   crs:LuminanceAdjustmentBlue="-14"
+   crs:LuminanceAdjustmentBlue="-5"
    crs:LuminanceAdjustmentPurple="0"
    crs:LuminanceAdjustmentMagenta="0"
-   crs:SplitToningShadowHue="29"
-   crs:SplitToningShadowSaturation="12"
-   crs:SplitToningHighlightHue="80"
-   crs:SplitToningHighlightSaturation="18"
-   crs:SplitToningBalance="+60"
+   crs:SplitToningShadowHue="49"
+   crs:SplitToningShadowSaturation="4"
+   crs:SplitToningHighlightHue="0"
+   crs:SplitToningHighlightSaturation="0"
+   crs:SplitToningBalance="-100"
    crs:ColorGradeMidtoneHue="0"
    crs:ColorGradeMidtoneSat="0"
    crs:ColorGradeShadowLum="0"
@@ -88,17 +87,17 @@
    crs:ColorGradeGlobalHue="0"
    crs:ColorGradeGlobalSat="0"
    crs:ColorGradeGlobalLum="0"
-   crs:GrainAmount="41"
-   crs:GrainSize="15"
-   crs:GrainFrequency="60"
+   crs:GrainAmount="39"
+   crs:GrainSize="25"
+   crs:GrainFrequency="50"
    crs:PostCropVignetteAmount="0"
-   crs:ShadowTint="-15"
-   crs:RedHue="+20"
-   crs:RedSaturation="0"
-   crs:GreenHue="+50"
-   crs:GreenSaturation="+20"
-   crs:BlueHue="-50"
-   crs:BlueSaturation="0"
+   crs:ShadowTint="0"
+   crs:RedHue="+10"
+   crs:RedSaturation="+5"
+   crs:GreenHue="0"
+   crs:GreenSaturation="+5"
+   crs:BlueHue="0"
+   crs:BlueSaturation="-10"
    crs:HDREditMode="0"
    crs:CurveRefineSaturation="100"
    crs:ConvertToGrayscale="False"
@@ -108,7 +107,7 @@
    crs:HasSettings="True">
    <crs:Name>
     <rdf:Alt>
-     <rdf:li xml:lang="x-default">Moody Retro - 1</rdf:li>
+     <rdf:li xml:lang="x-default">Vintage 80 - 1</rdf:li>
     </rdf:Alt>
    </crs:Name>
    <crs:ShortName>
@@ -123,7 +122,7 @@
    </crs:SortName>
    <crs:Group>
     <rdf:Alt>
-     <rdf:li xml:lang="x-default">Moody Retro - thedarkroomm.com</rdf:li>
+     <rdf:li xml:lang="x-default">Vintage 80 </rdf:li>
     </rdf:Alt>
    </crs:Group>
    <crs:Description>
@@ -133,33 +132,45 @@
    </crs:Description>
    <crs:ToneCurvePV2012>
     <rdf:Seq>
-     <rdf:li>0, 4</rdf:li>
-     <rdf:li>40, 26</rdf:li>
-     <rdf:li>73, 62</rdf:li>
-     <rdf:li>121, 126</rdf:li>
-     <rdf:li>168, 172</rdf:li>
-     <rdf:li>202, 203</rdf:li>
-     <rdf:li>255, 255</rdf:li>
+     <rdf:li>0, 24</rdf:li>
+     <rdf:li>55, 72</rdf:li>
+     <rdf:li>117, 127</rdf:li>
+     <rdf:li>185, 181</rdf:li>
+     <rdf:li>255, 229</rdf:li>
     </rdf:Seq>
    </crs:ToneCurvePV2012>
    <crs:ToneCurvePV2012Red>
     <rdf:Seq>
      <rdf:li>0, 0</rdf:li>
+     <rdf:li>36, 24</rdf:li>
+     <rdf:li>66, 57</rdf:li>
+     <rdf:li>88, 86</rdf:li>
+     <rdf:li>135, 144</rdf:li>
+     <rdf:li>184, 196</rdf:li>
      <rdf:li>255, 255</rdf:li>
     </rdf:Seq>
    </crs:ToneCurvePV2012Red>
    <crs:ToneCurvePV2012Green>
     <rdf:Seq>
      <rdf:li>0, 0</rdf:li>
+     <rdf:li>29, 23</rdf:li>
+     <rdf:li>49, 42</rdf:li>
+     <rdf:li>93, 97</rdf:li>
+     <rdf:li>115, 125</rdf:li>
+     <rdf:li>182, 194</rdf:li>
+     <rdf:li>214, 222</rdf:li>
      <rdf:li>255, 255</rdf:li>
     </rdf:Seq>
    </crs:ToneCurvePV2012Green>
    <crs:ToneCurvePV2012Blue>
     <rdf:Seq>
      <rdf:li>0, 0</rdf:li>
-     <rdf:li>71, 71</rdf:li>
-     <rdf:li>142, 140</rdf:li>
-     <rdf:li>208, 204</rdf:li>
+     <rdf:li>33, 15</rdf:li>
+     <rdf:li>67, 51</rdf:li>
+     <rdf:li>97, 95</rdf:li>
+     <rdf:li>129, 143</rdf:li>
+     <rdf:li>156, 176</rdf:li>
+     <rdf:li>217, 229</rdf:li>
      <rdf:li>255, 255</rdf:li>
     </rdf:Seq>
    </crs:ToneCurvePV2012Blue>

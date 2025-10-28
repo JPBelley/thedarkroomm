@@ -18,7 +18,7 @@ const IndexPage: React.FC<PageProps> = ({ data }) => {
       <Layout>
         <Hero
           title='Products'
-          description="Whether you're a beginner or a pro, our presets are designed to enhance your photos with beautiful tones and a unique style—helping you achieve the look you love with just few clicks."
+          description="Whether you're a beginner or a pro, our presets are designed to enhance your photos with beautiful tones and a unique style helping you achieve the look you love with just few clicks."
         />
         <div className="container-white px-5 pt-12 lg:pt-24 rounded-2xl">
           <Columns columns="4">

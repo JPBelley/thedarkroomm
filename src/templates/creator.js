@@ -51,10 +51,10 @@ const CreatorPostTemplate = ({ data }) => {
             <h2 className="text-center mb-4">Products</h2>
             <Columns columns="4">
               {strapiCreator.products.map((column, i) => {
-                const { featuredImage, Slug } = column;
+                const { featuredImage, Slug, Title, category } = column;
 
                 return (
-                  <Card key={i} image={featuredImage} href={`/product/${Slug}`} itemId={Slug} />
+                  <Card key={i} category={category.name} title={Title} image={featuredImage} href={`/product/${Slug}`} itemId={Slug} />
                 )
               })}
             </Columns>
@@ -98,6 +98,9 @@ export const pageQuery = graphql`
       products {
         Slug
         Title
+        category {
+          name
+        }
         featuredImage {
           localFile {
             childImageSharp {

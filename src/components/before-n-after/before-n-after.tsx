@@ -21,8 +21,6 @@ export default function BeforeAfterComparison({
     const [sliderPosition, setSliderPosition] = useState(50)
     const [isDragging, setIsDragging] = useState(false)
     const containerRef = useRef<HTMLDivElement>(null)
-    console.log(afterImage);
-    
 
     const handleMouseDown = useCallback((e: MouseEvent) => {
         sa_event(`click_dragging`);
@@ -89,7 +87,7 @@ export default function BeforeAfterComparison({
             <div className="p-0">
                 <div
                     ref={containerRef}
-                    className="relative w-full overflow-hidden cursor-col-resize select-none"
+                    className={`relative w-full overflow-hidden select-none${afterImage ?' cursor-col-resize' : ''}`}
                     style={{ touchAction: "none" }}
                 >
                     {/* Before Image */}
@@ -128,7 +126,7 @@ export default function BeforeAfterComparison({
                     >
                         {/* Slider Handle */}
                         <div
-                            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-8 h-8 bg-white rounded-full shadow-lg border-2 border-black cursor-col-resize pointer-events-auto flex items-center justify-center hover:bg-gray-50 transition-colors"
+                            className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-8 h-8 bg-white rounded-full shadow-lg border-2 border-black pointer-events-auto flex items-center justify-center hover:bg-gray-50 transition-colors${afterImage ? ' cursor-col-resize' : ''}`}
                             onMouseDown={handleMouseDown}
                             onTouchStart={handleTouchStart}
                         >
@@ -141,7 +139,7 @@ export default function BeforeAfterComparison({
 
                     {/* Invisible drag area for better UX */}
                     {afterImage && <div
-                        className="absolute inset-0 cursor-col-resize"
+                        className={`absolute inset-0${afterImage ? ' cursor-col-resize' : ''}`}
                         onMouseDown={(e) => {
                             if (!containerRef.current) return
                             const rect = containerRef.current.getBoundingClientRect()
