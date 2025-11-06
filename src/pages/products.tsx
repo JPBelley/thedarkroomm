@@ -31,7 +31,7 @@ const IndexPage: React.FC<PageProps> = ({ data }) => {
                   card={column}
                   image={featuredImage}
                   href={`/product/${Slug}`}
-                  itemId={''}
+                  itemId={Slug}
                   size="small"
                   category={category?.name}
                   title={Title}
