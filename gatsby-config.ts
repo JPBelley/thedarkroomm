@@ -89,7 +89,7 @@ const config: GatsbyConfig = {
     {
       resolve: "gatsby-source-strapi",
       options: {
-        apiURL: "http://127.0.0.1:1337", // or your deployed Strapi URL
+        apiURL: "http://68.183.193.68", // or your deployed Strapi URL
         accessToken: process.env.STRAPI_TOKEN,
         collectionTypes: ["product", "creator"], // your Strapi collection names
         singleTypes: ["homepage", "about"], // optional
